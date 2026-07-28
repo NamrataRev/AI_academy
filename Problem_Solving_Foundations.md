@@ -6,7 +6,7 @@
 
 _By the end of this topic, you will be able to:_
 
-- Explain what decomposition and abstraction mean, in your own words.
+- Explain what decomposition and abstraction mean.
 - Identify the smaller sub-problems hidden inside any large, messy problem.
 - Understand why abstraction is necessary when building apps used by millions.
 - Tell the difference between decomposition (breaking apart) and abstraction (hiding detail).
