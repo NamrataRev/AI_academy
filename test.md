@@ -98,7 +98,7 @@ A Large Language Model (LLM) like Claude is essentially autocorrect taken to an 
 
 This is the direct path from rule-based computing to modern AI: rules → statistical patterns → machine learning → deep learning → LLMs. Each step made the system more capable of handling uncertainty and complexity — and each step made it more probabilistic.
 
-**This is exactly why AI gives different answers to the same question** — which Section 1.5 now explains in detail.
+**This is exactly why AI gives different answers to the same question** — which Section 1.6 now explains in detail.
 
 ## 1.6 Why AI Gives Different Answers to the Same Question
 
