@@ -9,6 +9,7 @@ By the end of this topic, you will be able to:
 - Define **computation** and explain how computers process information.
 - Differentiate between **deterministic** and **probabilistic** systems.
 - Identify real-world examples of both deterministic and probabilistic systems.
+- Trace how computing evolved from fixed rules to probabilistic thinking to modern AI.
 - Explain why **AI can generate different responses** to the same input.
 - Understand the importance of these concepts as the foundation for learning AI.
 
@@ -45,6 +46,8 @@ A probabilistic system can give different outputs for the same input because it 
 - A weather forecast may say there is a 70% chance of rain, but the exact outcome is uncertain.
 - A recommendation system may suggest different movies to users based on changing patterns and preferences.
 
+## 1.4 Deterministic vs. Probabilistic Systems — At a Glance
+
 | Feature               | Deterministic System                     | Probabilistic System                                        |
 | --------------------- | ---------------------------------------- | ----------------------------------------------------------- |
 | Output for same input | Always the same                          | Can vary each time                                          |
@@ -55,7 +58,49 @@ A probabilistic system can give different outputs for the same input because it 
 | Used in               | Traditional software                     | Modern AI systems                                           |
 | Advantage             | Reliable, consistent, easy to test       | Flexible, handles uncertainty, generates creative responses |
 
-## 1.4 Why AI Gives Different Answers to the Same Question
+## 1.5 From Rules to AI — How Computing Evolved
+
+We have now seen two types of system: deterministic (fixed rules) and probabilistic (likelihoods). But how did we go from rule-based computers to modern AI? This section traces that journey — and shows why it was not a sudden leap, but a natural progression driven by one simple problem: **rules alone are not enough for real-world complexity.**
+
+### 1.5.1 The Problem with Pure Rules
+
+Early computers were entirely deterministic. Every program was a fixed set of instructions — if this happens, do that. This worked brilliantly for calculators, ATMs, and booking systems: tasks with clear, bounded rules.
+
+But some problems completely resisted rules:
+
+- How do you write a rule for "recognise a cat in a photo"?
+- How do you write a rule for "translate this sentence naturally"?
+- How do you write a rule for "reply helpfully to any question a human might ask"?
+
+Engineers tried. The result was brittle, limited, and exhausting to maintain. A spam filter based on rules, for example, would block any email containing the word "free" — even a legitimate email from a friend saying "feel free to call me."
+
+**The key insight of modern AI:** Instead of writing the rules, show the system millions of examples and let it discover the patterns itself. This is called **machine learning** — and it is inherently probabilistic, because patterns extracted from data always come with uncertainty.
+
+
+### 1.5.2 A Bridge Example — Autocorrect
+
+Autocorrect is the perfect stepping stone between a simple rule-based system and a full AI, because every student already uses it daily.
+
+**Early autocorrect (deterministic):** Had a fixed dictionary. "Teh" always became "The." No context, no variation. Pure rule: wrong spelling → correct spelling.
+
+**Modern autocorrect (probabilistic):** Looks at the whole sentence context. "I'll meat you at the" — it suggests "meet" not "meat," because it has learned from millions of sentences that "meet you" is far more probable in this context. Type the same word in a recipe and it might not correct it at all.
+
+Same input, different output depending on context. This is exactly what probabilistic systems do — and it is the same foundation that powers modern AI.
+
+### 1.5.3 From Autocorrect to an LLM — The Same Idea, Scaled Up
+
+A Large Language Model (LLM) like Claude is essentially autocorrect taken to an extreme:
+
+- Autocorrect predicts the **next word** from a short phrase.
+- An LLM predicts the **next token** from an entire conversation, document, or instruction set.
+- Both are probabilistic — both sample from a distribution of likely continuations.
+- The LLM simply does it across a vastly larger vocabulary, with a vastly richer understanding of context, billions of times per response.
+
+This is the direct path from rule-based computing to modern AI: rules → statistical patterns → machine learning → deep learning → LLMs. Each step made the system more capable of handling uncertainty and complexity — and each step made it more probabilistic.
+
+**This is exactly why AI gives different answers to the same question** — which Section 1.6 now explains in detail.
+
+## 1.6 Why AI Gives Different Answers to the Same Question
 
 Unlike a calculator, AI does not always produce one fixed answer. It looks at your question, understands the context, and predicts the most suitable response based on patterns it learned from a huge amount of data.
 
