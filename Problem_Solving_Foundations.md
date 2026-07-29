@@ -17,7 +17,6 @@ _By the end of this topic, you will be able to:_
 Every big problem feels overwhelming when you look at it all at once. _"Build an app like Swiggy"_ sounds huge and scary. But no engineer - or AI - solves a big problem in one jump. They always **break it down first.**
 This topic teaches two foundational skills that every engineer uses every single day. **Decomposition** is the skill of splitting a large problem into smaller, manageable pieces. **Abstraction** is the skill of hiding complexity - showing only what matters to each person.
 These two ideas are the starting point of **computational thinking** - the way engineers (and AI systems) approach any problem. Master them here, and every other topic in this programme becomes easier.
-**💡 Why this matters for you:** As an AI-Native Engineer, your job will often be: take a vague business request, break it into pieces, and describe each piece clearly enough for a human or an AI to build it. Decomposition and abstraction are exactly the tools for that.
 
 ## 2.1 Decomposition - Breaking a Big Problem into Smaller Pieces
 
