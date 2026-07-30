@@ -1,6 +1,6 @@
 # Specifying for AI
 
-## What Makes a Good Specification
+## Specification
 
 ## Learning Objectives
 
