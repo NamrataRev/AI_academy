@@ -44,10 +44,22 @@ Human language is naturally vague. If you tell a friend "get me something to eat
 
 A specification is only useful if it has all four of these properties. Miss even one and you open the door to a result you didn't want. Memorise them as **T.B.O.A.**
 
-- **Testable** — you can check, with a clear yes or no, whether the output meets the requirement. Ask yourself: "Can I write a test that proves this was done correctly?"
-- **Bounded** — the task has clear limits — a maximum length, a specific scope, a defined set of inputs it must handle. Ask yourself: "Does this say how big, how long, or how much?"
-- **Observable** — you can actually see or measure the output to judge it. Ask yourself: "Can I look at the result and judge it against the spec?"
-- **Actionable** — the instruction tells the system what to *do*, not just what outcome you vaguely wish for. Ask yourself: "Does this tell the system a concrete action to take?"
+**Testable** — you can check, with a clear yes or no, whether the output meets the requirement. Ask yourself: "Can I write a test that proves this was done correctly?"
+- Not testable: "make it engaging."
+- Testable: "open with a question and use no sentence longer than 20 words."
+
+**Bounded** — the task has clear limits — a maximum length, a specific scope, a defined set of inputs it must handle. Ask yourself: "Does this say how big, how long, or how much?"
+- Unbounded: "summarise this report."
+- Bounded: "summarise this report in five bullets, under 100 words total."
+
+**Observable** — you can actually see or measure the output to judge it. Ask yourself: "Can I look at the result and judge it against the spec?"
+- Not observable: "make it sound more professional."
+- Observable: "remove contractions, remove exclamation marks, use full job titles on first mention."
+
+**Actionable** — the instruction tells the system what to *do*, not just what outcome you vaguely wish for. Ask yourself: "Does this tell the system a concrete action to take?"
+- Not actionable: "don't be vague."
+- Actionable: "give one concrete example after each definition."
+
 
 **Real-life analogy:** Imagine giving directions to a Swiggy delivery partner. "Go somewhere near Koramangala" is not testable, bounded, observable, or actionable — the rider has no idea if they've succeeded. "Deliver to Flat 302, Sunrise Apartments, 80 Feet Road, Koramangala 4th Block, by 8:00 PM" gives them everything they need. That is a specification.
 
@@ -142,6 +154,22 @@ flowchart LR
 - Expected output: refund amount calculated per Indian Railways cancellation rules, displayed to the user within 5 seconds
 - Failure conditions: invalid PNR → show "PNR not found" error; cancellation after chart preparation → show "no refund eligible, contact TDR"; system timeout → show "please retry" with no silent failure
 
+```mermaid
+flowchart TD
+    A[User enters PNR number\nand cancellation details] --> B{Is PNR valid?}
+    B -- No --> C[Show 'PNR not found' error]
+    C --> End1([End])
+    B -- Yes --> D{Is cancellation after\nchart preparation?}
+    D -- Yes --> E[Show 'No refund eligible\nContact TDR']
+    E --> End2([End])
+    D -- No --> F[Calculate refund amount\nper Railways rules]
+    F --> G{System response\nwithin 5 seconds?}
+    G -- No --> H[Show 'Please retry'\nNo silent failure]
+    H --> End3([End])
+    G -- Yes --> I[Display refund amount\nto user]
+    I --> End4([End])
+```
+
 ### Rules for a Good Specification
 
 - Always write the specification down in text — do not keep it in your head. A written spec can be reviewed, tested, and reused
@@ -155,95 +183,6 @@ flowchart LR
 - Specifying only the happy path and being surprised when edge cases produce bad results
 
 > A specification is not the same as a wish. A wish describes a feeling — "users should feel the app is trustworthy." A specification describes an action and a measurable outcome — "display the total amount debited in bold, immediately after every UPI transaction." Your job is to translate wishes into specifications.
-
----
-
-## Real World Applications
-
-<div style="display:flex;align-items:flex-start;gap:24px;margin-bottom:24px">
-<div style="flex:1">
-
-**Banking / UPI**
-Specifying exactly how a UPI failure message should be worded, when it should appear, and what information it must contain. Ambiguity here causes real customer confusion and complaints.
-
-</div>
-<div style="flex:1">
-
-```mermaid
-flowchart TD
-    A[UPI Payment fails] --> B{Reason?}
-    B -- Insufficient balance --> C[Show specific error\nwithin 3 seconds]
-    B -- Bank server down --> C
-    B -- Incorrect PIN --> C
-    C --> D[Show Retry button]
-```
-
-</div>
-</div>
-
-<div style="display:flex;align-items:flex-start;gap:24px;margin-bottom:24px">
-<div style="flex:1">
-
-**College attendance system**
-Specifying an alert tool — bounded to 75% threshold, testable against attendance records, observable in the email sent, and actionable with a concrete trigger every Friday at 6 PM.
-
-</div>
-<div style="flex:1">
-
-```mermaid
-flowchart TD
-    A[Every Friday 6 PM] --> B[Check attendance\nfor all students]
-    B --> C{Below 75%\nin any subject?}
-    C -- Yes --> D[Send email alert\nwith subject and %]
-    C -- No --> E[No action]
-```
-
-</div>
-</div>
-
-<div style="display:flex;align-items:flex-start;gap:24px">
-<div style="flex:1">
-
-**E-commerce returns**
-Specifying that a return-eligibility checker must classify an order as "eligible," "not eligible," or "needs manual review" — covering every possible order status as a failure condition.
-
-</div>
-<div style="flex:1">
-
-```mermaid
-flowchart TD
-    A[Return request raised] --> B{Item status?}
-    B -- Damaged --> C[Eligible]
-    B -- Within return window --> D[Eligible]
-    B -- Outside return window --> E[Not eligible]
-    B -- Unclear --> F[Needs manual review]
-```
-
-</div>
-</div>
-
----
-
-## Worked Example — Weekly Assignment Reminder
-
-**Scenario:** Write a specification for an AI tool that sends a weekly summary email to college students listing their pending assignments.
-
-**Step 1 — Identify the input:**
-A list of assignments with subject name, due date, and submission status — submitted or pending.
-
-**Step 2 — Identify the expected output:**
-A plain-text email, no more than 120 words, listing only pending assignments sorted by due date (soonest first), with the subject line "Your Pending Assignments This Week."
-
-**Step 3 — Identify the failure conditions:**
-- If there are zero pending assignments → send a short congratulatory message instead of an empty list
-- If a due date is missing or invalid → exclude that assignment and add a note: "1 assignment could not be checked — please verify manually"
-- If the assignment list fails to load → do not send any email, and instead alert the system administrator
-
-**The final specification:**
-
-> "Generate a plain-text weekly email, subject line 'Your Pending Assignments This Week,' listing only assignments marked 'pending,' sorted by due date (soonest first), maximum 120 words. If zero assignments are pending, send: 'Great job — you have no pending assignments this week!' If any assignment has a missing or invalid due date, exclude it and append: '[N] assignment(s) could not be checked — please verify manually.' If the assignment data fails to load entirely, do not send the email and log an alert for the system administrator instead."
-
-Notice how this single paragraph is testable (check word count and sorting), bounded (120-word limit, specific subject line), observable (read the email and compare line by line), and actionable (every instruction tells the system exactly what to do).
 
 ---
 
