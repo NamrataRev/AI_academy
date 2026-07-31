@@ -14,7 +14,7 @@ By the end of this topic, you will be able to:
 
 ## Overview
 
-In Week 1 you learned that AI is probabilistic — it predicts a likely answer rather than looking up a fixed one. That has a direct consequence: **anything you do not specify, the model decides for you.** A specification is the description of what you want that is precise enough for someone — or something — else to produce it without guessing. Writing good specs is the core skill of working with AI.
+Till now you have learned that AI is probabilistic — it predicts a likely answer rather than looking up a fixed one. That has a direct consequence: **anything you do not specify, the model decides for you.** A specification is the description of what you want that is precise enough for someone — or something — else to produce it without guessing. Writing good specs is the core skill of working with AI.
 
 ## 2.1 What Makes a Good Specification — Testable, Bounded, Observable, Actionable
 
