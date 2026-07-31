@@ -128,11 +128,6 @@ Each step made the system better at handling situations it had never been explic
 
 ---
 ## 1.6 Why AI Gives Different Answers to the Same Question
-
-Unlike a calculator, AI does not always produce one fixed answer. It looks at your question, understands the context, and predicts the most suitable response based on patterns it learned from a huge amount of data.
-
-Because there can be many correct ways to answer the same question, AI may choose different words or examples each time.
-
 **Daily-life analogy:** Imagine asking three different teachers: _"What is Machine Learning?"_
 
 All three know the answer -- but each may explain it differently.
