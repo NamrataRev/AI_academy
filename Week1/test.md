@@ -126,6 +126,7 @@ This is the direct path from rule-based computing to modern AI:
 
 Each step made the system better at handling situations it had never been explicitly programmed for. And each step made it more probabilistic — which is exactly why AI gives different answers to the same question, which the next section covers in detail.
 
+---
 ## 1.6 Why AI Gives Different Answers to the Same Question
 
 Unlike a calculator, AI does not always produce one fixed answer. It looks at your question, understands the context, and predicts the most suitable response based on patterns it learned from a huge amount of data.
