@@ -8,12 +8,12 @@
 
 By the end of this topic, you should be able to:
 
-1. Explain what a specification is and why it is the most important skill for anyone who directs AI to do work
-2. Identify the four properties of a good specification — Testable, Bounded, Observable, Actionable (T.B.O.A.)
-3. Tell the difference between a vague, weak specification and a precise, professional one
-4. Break any task down into its inputs, expected outputs, and failure conditions before asking AI to do it
-5. Write a well-formed specification for a simple real-world task
-6. Look at an existing specification and spot what is missing from it
+- Explain what a specification is and why it is the most important skill for anyone who directs AI to do work
+- Identify the four properties of a good specification — Testable, Bounded, Observable, Actionable (T.B.O.A.)
+- Tell the difference between a vague, weak specification and a precise, professional one
+- Break any task down into its inputs, expected outputs, and failure conditions before asking AI to do it
+- Write a well-formed specification for a simple real-world task
+- Look at an existing specification and spot what is missing from it
 
 ---
 
