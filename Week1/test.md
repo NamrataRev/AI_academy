@@ -160,7 +160,22 @@ flowchart TD
     but can occasionally sample a lower-likelihood one]
 ```
 
-This is exactly why asking Claude the same question twice can give you two different (but both reasonable) answers — the model is sampling from probabilities, not looking up one fixed rule in a table. This behaviour is controlled by a setting called **temperature** (low temperature → more predictable, near-deterministic output; high temperature → more varied, creative output). We will study temperature and sampling in full mathematical detail in **Week 3 (What AI Is — and Isn't)** and **Week 7 (Probability, Statistics and AI Confidence)** — for now, simply understand: **an LLM's core behaviour is probabilistic by design, not by accident or flaw.**
+This is exactly why asking Claude the same question twice can give you two different 
+— but both reasonable — answers. The model is sampling from probabilities, not looking 
+up a fixed answer in a table.
+
+This behaviour is controlled by a setting called **temperature**:
+
+- **Low temperature** — the model plays it safe, picks the most probable response 
+  every time, output is predictable and consistent
+- **High temperature** — the model takes more risks, picks less obvious continuations, 
+  output is more varied and creative
+
+You will explore temperature and sampling in much more detail later in this program — 
+including the math behind how it works and how to tune it for different tasks. For now, 
+the one thing to hold onto is this: **an LLM's core behaviour is probabilistic by 
+design, not by accident or flaw.** It is not broken when it gives you two different 
+answers — it is working exactly as intended.
 
 ## Key Takeaway
 
