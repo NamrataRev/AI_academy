@@ -29,7 +29,18 @@ Here is how you write a tight specification in different fields:
 - **Food:** "Create a vegetarian dinner recipe using only paneer, tomatoes, and basic spices. List the exact measurements and provide step-by-step instructions. The total cooking time must be under 30 minutes."
 - **Scheduling:** "Create a daily schedule for a student studying for exams. Block out 4 hours for studying, 1 hour for exercise, and 8 hours for sleep. Format it as an hourly timeline starting at 7:00 AM."
 
-## 2.8 Testing a Specification: Did the AI Do What You Asked?
+## 2.8 Assigning a Persona (The "Act As" Hack)
+
+**What Is It?**
+One of the easiest ways to improve your specification is to tell the AI *who* it should be before you tell it *what* to do. Giving the AI a persona instantly changes the tone, vocabulary, and structure of its answer.
+
+**Think of it like this:** If you ask a random person on the street for medical advice, you will get a confusing answer. If you ask a doctor, you get a professional answer. AI works the same way.
+
+**Examples:**
+- **❌ Bad:** "Explain how a car engine works."
+- **✅ Good:** "Act as a friendly high school physics teacher. Explain how a car engine works in simple terms."
+
+## 2.9 Testing a Specification: Did the AI Do What You Asked?
 
 **What Is It?**
 Testing means matching the AI's output against your original specification (remember the 15% 'Verify' step from the 70/30 rule).
@@ -42,7 +53,7 @@ Never just read the output and say "looks good." Be a strict grader.
 3. **Check the tone:** Is it professional, or did it use slang when you told it not to?
 4. **Check the facts:** Did it invent a detail you did not provide?
 
-## 2.9 Iterating: Fixing Output Gaps
+## 2.10 Iterating: Fixing Output Gaps
 
 **What Is It?**
 An "output gap" is the difference between what you *wanted* and what the AI *produced*. Iterating means adjusting your prompt to close that gap.
@@ -55,6 +66,16 @@ An "output gap" is the difference between what you *wanted* and what the AI *pro
   - **Iteration:** Add more context: *"You are an expert event planner. Give me a step-by-step checklist, not general advice."*
 - **Gap:** The AI completely misunderstood the task.
   - **Iteration:** Break the task into smaller steps (Decomposition!): *"First, list the ingredients. Second, write the cooking steps."*
+
+## 2.11 The Pre-Flight Checklist (Before You Hit Send)
+
+Before you press enter on any important AI prompt, do a quick 3-step check:
+
+1. **Role Check:** Did I give the AI a persona? (e.g., "Act as an expert marketer").
+2. **Context Check:** Did I explain *why* I need this? (e.g., "This is for a presentation to beginners").
+3. **Format Check:** Did I tell it exactly how I want the answer? (e.g., "Give me a bulleted list").
+
+If you can check all three boxes, you have written a professional specification!
 
 ## Key Takeaway
 

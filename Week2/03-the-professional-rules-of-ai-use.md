@@ -29,6 +29,10 @@ The 70/30 rule is a simple guideline for dividing work between you and the AI. A
 
 **Why this matters:** When you use AI, you shift from being a "creator" to an "editor and manager". If the final output is wrong, it is *your* fault, not the AI's.
 
+**Example: Writing an email to a client**
+- **❌ Bad (0/100 Rule):** You tell the AI "write an email to client X about a delay." You copy-paste it without reading. It promises a discount you never authorised.
+- **✅ Good (70/30 Rule):** You tell the AI "Write a polite email to client X. Tell them the shipment is delayed by 2 days due to weather. Do not offer a refund." (Specify). The AI writes a nice draft (Implement). You read it, fix one clunky sentence, and send it (Verify).
+
 ## 2.6 When NOT to Use AI
 
 AI is powerful, but it is not a magic solution for everything. Because it is probabilistic (it guesses the next best word based on patterns, as we learned earlier), it can be confidently wrong (known as a "hallucination").
@@ -55,6 +59,27 @@ Here are the three strict rules for when you should **never** rely entirely on A
 
 - You cannot sue an AI if it gives you bad legal advice. An AI cannot take responsibility if it gives you a wrong medical diagnosis. 
 - **Example:** If you need to write a legally binding contract, AI can draft a *template*, but a human lawyer must verify it. If it is wrong, *you* are legally accountable.
+
+## 2.7 Plagiarism vs. Productivity
+
+**What Is It?**
+There is a fine line between using AI as a tool and using it to cheat. Understanding the difference is crucial for your career.
+
+- **Plagiarism (Cheating):** Using AI to generate an entire essay, project, or piece of code and submitting it as 100% your own original thought, without having learned anything or done the work.
+- **Productivity (Professional):** Using AI to brainstorm ideas, overcome writer's block, check your grammar, or explain a difficult concept so you can write the final piece yourself.
+
+**The Golden Rule:** AI should act as your tutor or assistant, not your replacement.
+
+## 2.8 Disclosing AI Use
+
+**What Is It?**
+Transparency is a professional superpower. If you heavily relied on AI to complete a major task, it is often best to disclose it.
+
+**When to tell your manager/teacher:**
+- **Do tell them** if AI generated the core structure of a report, wrote a significant portion of code, or created the data models you are presenting. (e.g., *"I used Claude to help structure this report and draft the initial summary."*)
+- **No need to tell them** if you just used AI like a glorified spellchecker or to rephrase a single awkward sentence.
+
+When you disclose AI use, it shows honesty and confidence. Hiding it makes it look like you were trying to cheat.
 
 ## Key Takeaway
 

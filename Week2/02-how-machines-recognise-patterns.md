@@ -60,6 +60,32 @@ flowchart LR
 
 If you write a rule that says a "chair" has four legs, the system will fail if it sees a modern office chair with one thick base. But if a machine uses **pattern recognition**, it understands the overall shape and visual context of a chair, allowing it to correctly identify a chair it has never seen before.
 
+## 2.5 Why Data Quality Matters (Bad Data = Bad Patterns)
+
+**What Is It?**
+Because AI learns by finding patterns in the data you give it, the quality of that data is everything. If the data is flawed, the AI's "hidden rule" will be flawed too. This is often called **AI Bias**.
+
+**Example:**
+Imagine you want to train an AI to screen resumes and find the best engineers. You feed it 10 years of your company's past hiring data. 
+However, for the past 10 years, your company mostly hired men from a specific university. 
+- **The AI's Pattern:** It notices that the "successful" resumes belong to men from that university.
+- **The Result:** The AI starts automatically rejecting brilliant women or people from other colleges, not because it is "evil," but because it found a biased pattern in the bad data you provided. 
+
+**Rule of thumb:** An AI is only as smart (and as fair) as the data it learns from.
+
+## 2.6 When Pattern Recognition Fails (Wrong Correlations)
+
+**What Is It?**
+Sometimes, machines find a pattern that is technically there, but completely meaningless in the real world. This happens when the AI confuses **correlation** (two things happening at the same time) with **causation** (one thing causing the other).
+
+**Example:**
+A famous real-world AI was trained to detect pictures of sheep. It did a great job! But engineers later realised it was not looking at the *sheep* at all. 
+- In almost every training photo, the sheep were standing on **green grass**.
+- The AI simply learned the pattern: *Lots of green pixels = Sheep*.
+- When shown a picture of a sheep on a snowy mountain, it failed. It had found the wrong correlation.
+
+When humans solve problems, we use common sense to know that grass does not *make* a sheep. AI does not have common sense — it only has patterns.
+
 ## Key Takeaway
 
 - **Pattern recognition** is how machines learn from examples instead of fixed rules.
