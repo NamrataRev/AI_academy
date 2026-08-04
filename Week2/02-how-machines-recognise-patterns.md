@@ -12,7 +12,11 @@ By the end of this topic, you will be able to:
 
 ## Overview
 
-Instead of giving a machine exact rules to follow, modern AI learns by looking at thousands of examples and finding the hidden rules itself. This ability to spot recurring themes, shapes, or behaviours in data is called **pattern recognition**. It is the absolute foundation of how machines learn to "see", "hear", and "understand" the world around us.
+In the last topic, you learned to write precise specifications — telling a machine exactly what to do, step by step. But some of the most powerful AI systems today aren't told step-by-step rules at all. Instead, they are shown a huge number of examples and asked to find the **pattern** hiding inside them.
+ 
+Think about how you learned to recognise a dog. Nobody gave you a checklist — "must have 4 legs, a tail, fur." Someone just pointed at different dogs over and over, and your brain figured out the pattern on its own. Machines learn in the exact same way.
+ 
+**Pattern recognition** is the process by which a machine looks at many repeated examples and works out a general rule — without a human writing that rule down directly. Understanding this explains both where AI's abilities come from and where its limits are.
 
 ## 2.1 What is Pattern Recognition?
 
