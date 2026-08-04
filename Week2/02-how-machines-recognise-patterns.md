@@ -16,12 +16,10 @@ In the last topic, you learned to write precise specifications — telling a mac
  
 Think about how you learned to recognise a dog. Nobody gave you a checklist — "must have 4 legs, a tail, fur." Someone just pointed at different dogs over and over, and your brain figured out the pattern on its own. Machines learn in the exact same way.
  
-**Pattern recognition** is the process by which a machine looks at many repeated examples and works out a general rule — without a human writing that rule down directly. Understanding this explains both where AI's abilities come from and where its limits are.
-
 ## 2.1 What is Pattern Recognition?
 
 **What Is It?**
-Pattern recognition is the process where a computer looks at raw data (like images, text, or numbers) and identifies repeated shapes, trends, or structures within it.
+**Pattern recognition** is the process by which a machine looks at many repeated examples and works out a general rule — without a human writing that rule down directly. Understanding this explains both where AI's abilities come from and where its limits are.
 
 **Think of it like this:** Think about how Instagram Reels always seems to know 
 exactly what kind of content to show you — without you ever telling it your preferences. 
