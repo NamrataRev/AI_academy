@@ -1,0 +1,228 @@
+# How LLMs Work
+
+*What AI Is — and Isn't — BTech Semester 1*
+
+---
+
+## Learning Objectives
+
+By the end of this topic, you should be able to:
+
+1. Explain what a token is and why LLMs process text as tokens rather than whole words
+2. Describe the difference between training and inference in an LLM's lifecycle
+3. Explain what parameters are and why they matter — but also why they're not everything
+4. Explain how temperature controls how predictable or varied an LLM's output is
+5. Decide when to use low vs high temperature for a real task
+
+---
+
+## Overview
+
+You already know that LLMs are probabilistic — they don't look up one fixed answer, they predict the most likely next piece of text. This topic goes one level deeper and explains the actual machinery behind that behaviour.
+
+Think of it like understanding how a car works. You don't need to be a mechanic to drive — but knowing what a gear does, what fuel the engine needs, and what the temperature gauge means makes you a much better driver. Same here. Understanding **tokens, training, parameters, and temperature** makes you a much better AI engineer — you stop treating the model as a magic black box and start making informed decisions about how to use it.
+
+---
+
+## Tokens — How LLMs Actually Read Text
+
+A **token** is the small chunk of text an LLM actually reads and generates. It is not a whole word. It is not a letter. It is something in between — a short word, part of a longer word, a punctuation mark, or even a number fragment.
+
+For example, the word "unbelievable" doesn't go into an LLM as one piece. It goes in as:
+
+```mermaid
+flowchart LR
+    A[unbelievable] --> B[un + believ + able]
+    B --> C[Each piece converted\nto a number the model processes]
+```
+
+**Why tokens exist:**
+Breaking text into tokens lets the model handle any word it encounters — including new slang, misspellings, or words from other languages — by combining smaller known pieces. Without this, the model would need a fixed dictionary of every possible word that could ever exist. That's impossible.
+
+**Why this matters to you practically:**
+- AI API pricing is measured in tokens, not words or sentences — a longer prompt costs more
+- Models have a **context window** — a maximum number of tokens they can process at once. Exceed it and the model literally cannot "see" the earlier parts of your conversation
+- "Why did the AI stop mid-answer?" — it hit its output token limit
+
+> **Quick rule of thumb:** 1 token ≈ 0.75 words in English. So 1,000 words ≈ about 1,300 tokens.
+
+---
+
+## Training vs Inference — Learning vs Doing
+
+An LLM has two completely separate phases in its life. Most people confuse them.
+
+**Training** is the one-time, extremely expensive process where the model reads enormous amounts of text and gradually adjusts its internal settings until it gets good at predicting the next token. Think of it like a student going through 4 years of BTech — long, resource-intensive, happens once.
+
+**Inference** is what happens every single time *you* use the model. You send a prompt, the already-trained model uses everything it learned to predict the response, token by token. Think of it like that same student, now fully educated, answering your question in a job interview — fast, using knowledge already built up, without re-studying for your specific question.
+
+| Aspect | Training | Inference |
+|---|---|---|
+| When it happens | Once per model version | Every time you send a message |
+| Cost | Extremely high — massive compute, huge datasets | Much smaller per request |
+| What changes | Model's internal parameters are adjusted | Nothing changes — model just uses what it learned |
+| Analogy | Student studying for 4 years of BTech | Same student answering in a job interview |
+
+> **Important:** When you chat with Claude or ChatGPT, you are using **inference**. The model is not learning from your conversation in real time. Its underlying knowledge does not change because you talked to it. This is why Claude doesn't "remember" your previous conversations unless you explicitly give it that context.
+
+**Global example:** GPT-4 (OpenAI) reportedly cost over $100 million to train. That training happened once. Every time someone uses it — millions of times a day — that is inference, which costs a tiny fraction per request.
+
+---
+
+## Parameters — The Model's Internal Settings
+
+**Parameters** are the internal numeric settings inside the neural network that were adjusted during training. Think of them as billions of tiny dials, each nudged slightly during training until the model became good at predicting the next token.
+
+You'll often hear models described by their parameter count:
+- GPT-3 — 175 billion parameters
+- Llama 3 (Meta, open-source) — available in 8B, 70B, and 405B versions
+- Claude — Anthropic doesn't publicly disclose exact counts
+
+**Why more parameters generally help:**
+More parameters give the model more "capacity" to capture subtle, complex patterns — which is part of why larger models tend to perform better on difficult reasoning, coding, and writing tasks.
+
+**But don't oversimplify — parameter count is not everything:**
+- Quality and diversity of training data matters just as much
+- How the network's layers are designed (architecture) matters
+- Additional training steps — like teaching the model to follow instructions safely — matter enormously
+
+A well-trained smaller model can easily outperform a larger, poorly-trained one. This is why you should never judge an AI tool purely by its parameter count.
+
+**Real example — Llama 3 (Meta) vs older GPT models:**
+Meta's open-source Llama 3 8B model (8 billion parameters) outperformed GPT-3 (175 billion parameters) on many benchmarks — because better training data and architecture matter more than raw size.
+
+**Analogy:** Parameters are like the number of trained muscle-memory patterns a classical musician has built up over years of practice. More refined patterns generally mean more nuanced playing — but a musician with fewer, better-practised patterns can still outperform one with more, sloppier ones.
+
+---
+
+## Temperature — The Creativity Dial
+
+**Temperature** is a setting (usually a number between 0 and 1, sometimes higher) that controls how "adventurous" the model is allowed to be when picking the next token.
+
+Recall that for any given prompt, the model calculates a probability for many possible next tokens. For example:
+
+> Prompt: "The capital of India is ___"
+> - New Delhi: 91% likely
+> - Delhi: 6% likely
+> - Mumbai: 2% likely
+> - unclear: 1% likely
+
+**Temperature decides how strictly the model sticks to picking the highest-probability token.**
+
+```mermaid
+flowchart TD
+    A[Same probability distribution\nNew Delhi 91%, Delhi 6%, Mumbai 2%] --> B{Temperature setting}
+    B -- Low temperature 0.1 --> C[Almost always picks\nNew Delhi — consistent]
+    B -- High temperature 0.9 --> D[Sometimes picks Delhi\nor less likely options — varied]
+
+    classDef blue fill:#dbeafe,stroke:#2563eb,color:#1e3a5f
+    classDef orange fill:#ffedd5,stroke:#ea580c,color:#7c2d12
+    class C blue
+    class D orange
+```
+
+- **Low temperature (closer to 0)** — the model almost always picks the most likely next token. Output is consistent, predictable, near-deterministic. Good for facts, code, structured data.
+- **High temperature (closer to 1 or above)** — the model is more willing to pick lower-probability tokens. Output is more varied and "creative" — but also more likely to go off-track.
+
+> Temperature changes **how** the model samples — not **what** it knows. A fact-based question asked at high temperature can still get a correct answer, just possibly phrased differently each time.
+
+| Aspect | Low Temperature | High Temperature |
+|---|---|---|
+| Predictability | High — near-deterministic | Low — output varies more |
+| Best for | Factual Q&A, code generation, data extraction | Creative writing, brainstorming, ad copy variants |
+| Risk | Can feel repetitive or rigid | Higher chance of odd or incorrect phrasing |
+
+**Real examples:**
+- **GitHub Copilot** (global) — uses low temperature so generated code is consistent and predictable
+- **Jasper AI / Copy.ai** (global marketing tools) — use higher temperature to generate varied ad copy options for A/B testing
+- **Customer support bots** (Flipkart, Amazon) — low-to-moderate temperature, balancing natural replies with consistent, on-policy answers
+
+You will explore temperature and how to tune it for different tasks later in this program — including the math behind how it works. For now, the one thing to hold onto is this: **an LLM's core behaviour is probabilistic by design, not by accident or flaw.** It is not broken when it gives you two different answers — it is working exactly as intended.
+
+---
+
+## Real World Applications
+
+<div style="display:flex;align-items:flex-start;gap:24px;margin-bottom:24px">
+<div style="flex:1">
+
+**Coding assistants — GitHub Copilot, Cursor**
+Set to low temperature so generated code is consistent. Variation in code is usually a bug, not a feature. Used by millions of developers globally — Microsoft reports Copilot writes 46% of code for developers who use it.
+
+</div>
+<div style="flex:1">
+
+```mermaid
+flowchart TD
+    A[Developer writes function name] --> B[Copilot predicts\nnext lines of code]
+    B --> C[Low temperature\nconsistent output every time]
+```
+
+</div>
+</div>
+
+<div style="display:flex;align-items:flex-start;gap:24px;margin-bottom:24px">
+<div style="flex:1">
+
+**Marketing content tools — Jasper, Copy.ai**
+Set to higher temperature when generating multiple ad copy variants. Variety is the goal — the marketing team picks the best one. Used by companies like Airbnb and HubSpot globally.
+
+</div>
+<div style="flex:1">
+
+```mermaid
+flowchart TD
+    A[Brief: Write 5 Diwali\nsale messages for Myntra] --> B[High temperature\ngenerates 5 varied options]
+    B --> C[Marketing team\npicks the best one]
+```
+
+</div>
+</div>
+
+<div style="display:flex;align-items:flex-start;gap:24px">
+<div style="flex:1">
+
+**Healthcare documentation — globally and in India**
+Very low temperature when summarising patient notes or generating medical reports. Consistent, precise language is critical — a "creative" variation in a diagnosis summary could cause real harm.
+
+</div>
+<div style="flex:1">
+
+```mermaid
+flowchart TD
+    A[Doctor's voice notes] --> B[LLM summarises\ninto structured report]
+    B --> C[Very low temperature\nprecise consistent output]
+    C --> D[Doctor reviews\nand approves]
+```
+
+</div>
+</div>
+
+---
+
+## Worked Example — Food Delivery App Feature
+
+**Scenario:** You're building AI features for a Swiggy-style food delivery app. Choose the right temperature for each feature:
+
+| Feature | Recommended Temperature | Why |
+|---|---|---|
+| Extract delivery address and pin code from a customer's free-text message | Low (0.1–0.2) | Needs precise, consistent structured output — no room for creative variation |
+| Generate 5 different "your order is delayed, sorry!" messages for A/B testing | High (0.7–0.9) | Variety across the 5 messages is the actual goal |
+| Answer "What is your refund policy?" using the official policy document | Low-to-moderate (0.2–0.3) | Wording can vary slightly, but factual policy content must stay accurate |
+| Suggest personalised restaurant recommendations for a returning user | Moderate (0.5–0.6) | Some variety is good — but recommendations should still be relevant |
+
+**How to decide:** Ask two questions — does this task need the same answer every time (→ low temperature), or does it benefit from variety (→ high temperature)? Then check — is factual accuracy critical? If yes, lean lower regardless.
+
+---
+
+## Key Takeaways
+
+- **Tokens** are the small text chunks LLMs actually read and generate — not whole words. AI pricing and limits are measured in tokens, not words
+- **Training** is the one-time, expensive process of learning patterns from data. **Inference** is the fast, repeated process of using the already-trained model on your prompts
+- When you chat with Claude, you are doing inference — the model is not learning from your conversation in real time
+- **Parameters** are the model's internal learned settings — more generally means more capacity, but data quality and architecture matter just as much
+- **Temperature** controls how strictly the model sticks to the most likely next token — low means consistent, high means varied
+- Low temperature → consistent, predictable (facts, code, structured data). High temperature → varied, creative (brainstorming, content variety)
+- Temperature changes *how* the model samples — not *what* it knows
+
+> **Interview tip:** Being able to explain temperature as "same probability distribution, different sampling strictness" — rather than just "temperature = randomness" — shows real understanding of how LLMs work. Most freshers can't explain it this precisely. You now can.
