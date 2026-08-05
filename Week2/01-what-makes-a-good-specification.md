@@ -1,6 +1,5 @@
 # What Makes a Good Specification
 
-*Specifying for AI — BTech Semester 1*
 
 ---
 
