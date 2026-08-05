@@ -20,22 +20,24 @@ Till now you have learned that AI is probabilistic — it predicts a likely answ
 
 A specification is a statement of the **result you want**, not a description of your feelings about the current result. Four tests separate a real spec from a wish.
 
-**Testable** — you can check whether the output meets it, and get a yes or no.
+These four properties are drawn from well-established standards in software and systems engineering. The **IEEE 830** standard for software requirements says every requirement must be *verifiable* (our "testable") and *unambiguous* (our "observable"). The widely used **SMART criteria** (Specific, Measurable, Achievable, Relevant, Time-bound) reinforce the same idea: if you cannot measure it, it is not a requirement — it is a hope. The four labels below translate those principles into a quick checklist you can use every time you write an instruction for AI.
+
+**Testable** — you can check whether the output meets it, and get a clear yes or no. (IEEE 830 calls this "verifiable"; SMART calls it "Measurable".)
 
 - Not testable: "make it engaging."
 - Testable: "open with a question and use no sentence longer than 20 words."
 
-**Bounded** — it states limits: length, format, scope, tone.
+**Bounded** — it states limits: length, format, scope, tone. (SMART calls this "Specific" and "Time-bound".)
 
 - Unbounded: "summarise this report."
 - Bounded: "summarise this report in five bullets, under 100 words total."
 
-**Observable** — it refers to something visible in the output, not an intention in your head.
+**Observable** — it refers to something visible in the output, not an intention in your head. (IEEE 830 calls this "unambiguous".)
 
 - Not observable: "make it sound more professional."
 - Observable: "remove contractions, remove exclamation marks, use full job titles on first mention."
 
-**Actionable** — it tells the system what to *do*, not only what to avoid.
+**Actionable** — it tells the system what to *do*, not only what to avoid. (RFC 2119, the standard for writing technical requirements, uses precise action words like "MUST", "SHALL", and "SHOULD" for exactly this reason.)
 
 - Not actionable: "don't be vague."
 - Actionable: "give one concrete example after each definition."
@@ -54,7 +56,7 @@ Now the same request, specified:
 
 Every clause is checkable. Anyone can hold the output against it and mark pass or fail — including you, including the model.
 
-**Daily-life example:** Telling a tailor "make this shirt nicer" gets you a surprise. Telling them "shorten the sleeves by two inches and replace the buttons with black ones" gets you the shirt you pictured. Same skill, different medium.
+**Daily-life example:** Telling a restaurant waiter "bring me something good" gets you a surprise. Telling them "a grilled chicken sandwich on whole wheat, no mayo, with a side salad" gets you exactly the meal you pictured. Same skill, different medium.
 
 | Feature              | Weak Specification      | Strong Specification              |
 | -------------------- | ----------------------- | --------------------------------- |

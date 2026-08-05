@@ -8,7 +8,7 @@ By the end of this topic, you will be able to:
 
 - Apply the 70/30 rule to balance AI assistance with human judgement.
 - Understand that your role shifts from "creator" to "manager" when using AI.
-- Identify scenarios where you should absolutely NOT rely on AI (privacy, precision, legal accountability).
+- Apply safe-use guardrails when working with AI in sensitive areas (privacy, precision, legal accountability).
 
 ## Overview
 
@@ -33,32 +33,52 @@ The 70/30 rule is a simple guideline for dividing work between you and the AI. A
 - **❌ Bad (0/100 Rule):** You tell the AI "write an email to client X about a delay." You copy-paste it without reading. It promises a discount you never authorised.
 - **✅ Good (70/30 Rule):** You tell the AI "Write a polite email to client X. Tell them the shipment is delayed by 2 days due to weather. Do not offer a refund." (Specify). The AI writes a nice draft (Implement). You read it, fix one clunky sentence, and send it (Verify).
 
-## 2.6 When NOT to Use AI
+## 2.6 How to Use AI Safely
 
-AI is powerful, but it is not a magic solution for everything. Because it is probabilistic (it guesses the next best word based on patterns, as we learned earlier), it can be confidently wrong (known as a "hallucination").
+AI is powerful, but it is probabilistic — it predicts the next best word based on patterns, which means it can be confidently wrong (known as a "hallucination"). The goal is not to avoid AI in sensitive areas, but to know the right **guardrails** to put in place so you get the benefits without the risks.
 
-Here are the three strict rules for when you should **never** rely entirely on AI:
+Here are the three areas where you need extra caution — and how to handle each one safely:
 
-### 1. Privacy and Confidentiality
+### 1. Privacy and Confidentiality — Anonymise Before You Share
 
-**Rule:** Never paste sensitive data into a public AI tool.
+AI tools may store or learn from the data you provide. That does not mean you cannot use AI with sensitive topics — it means you must **remove or mask identifying details first**.
 
-- AI tools often learn from the data you give them. If you paste your company's secret financial plan, user passwords, or a patient's medical records into a public chatbot, you could be leaking that data to the world.
-- **Example:** Do not ask an AI to "summarise this list of customer names, emails, and phone numbers."
+**Safe practice:**
+- Before pasting any text into an AI tool, strip out real names, email addresses, account numbers, and any data that could identify a person or reveal a trade secret.
+- Use placeholder values (e.g., "Company A", "Employee 1") so the AI can still work with the structure of your data without ever seeing the real details.
+- Use your organisation's approved AI tools (enterprise versions with data-privacy agreements) instead of free public chatbots for any work-related data.
 
-### 2. High Precision and Math
+**Example:**
+- **❌ Risky:** "Summarise this list of customer names, emails, and phone numbers."
+- **✅ Safe:** "Here are 10 anonymised customer support tickets. Identify the three most common complaint categories."
 
-**Rule:** Do not trust AI for exact math or critical factual lookups without double-checking.
+### 2. High Precision and Math — Use AI to Draft, Then Verify with the Right Tool
 
-- Large Language Models are designed to predict language, not to be calculators or databases. They can easily invent a convincing-sounding statistic or get a complex math problem wrong.
-- **Example:** Do not use AI to calculate the exact tax you owe on your income. Use a calculator or tax software instead.
+Large Language Models are designed to predict language, not to be calculators or databases. They can easily invent a convincing-sounding statistic or get a complex calculation wrong. That does not mean you should avoid AI for numerical tasks — it means you should **use AI for the structure and a proper tool for the numbers**.
 
-### 3. Legal and Medical Accountability
+**Safe practice:**
+- Let AI draft the layout of a financial report, a budget template, or a data summary — then plug in the real numbers yourself using a spreadsheet or calculator.
+- When AI provides a statistic or factual claim, always verify it against an authoritative source before using it in any professional output.
+- For complex calculations, ask AI to write the *formula* or *code* and then run it in a proper tool (e.g., Excel, Python) rather than trusting the AI's direct answer.
 
-**Rule:** Never use AI to make final decisions where human lives, health, or legal standing are at risk.
+**Example:**
+- **❌ Risky:** "Calculate the exact tax I owe on my income" and blindly trusting the answer.
+- **✅ Safe:** "Write me an Excel formula that calculates income tax based on these brackets" — then run it in Excel.
 
-- You cannot sue an AI if it gives you bad legal advice. An AI cannot take responsibility if it gives you a wrong medical diagnosis. 
-- **Example:** If you need to write a legally binding contract, AI can draft a *template*, but a human lawyer must verify it. If it is wrong, *you* are legally accountable.
+### 3. Legal and Medical Accountability — AI Drafts, Experts Approve
+
+You cannot sue an AI if it gives you bad legal advice. An AI cannot take responsibility if it gives you an incorrect medical assessment. But AI can still be incredibly useful in these fields — as long as a **qualified human makes the final decision**.
+
+**Safe practice:**
+- Use AI to create first drafts of contracts, policies, or medical summaries — then have a lawyer or medical professional review and approve the final version.
+- Clearly label any AI-generated output as "draft — requires expert review" so no one mistakes it for a verified document.
+- Never let an AI-generated output go directly to a patient, court, or regulatory body without human expert sign-off.
+
+**Example:**
+- **❌ Risky:** Using an AI-generated contract as-is and sending it to a client for signing.
+- **✅ Safe:** "Draft a freelance services agreement covering scope, payment terms, and termination clauses" — then having a lawyer review it before use.
+
+**The bottom line:** You do not need to fear AI in sensitive areas. You need to **pair it with the right safeguard** — anonymisation for privacy, verification tools for precision, and qualified experts for accountability.
 
 ## 2.7 Plagiarism vs. Productivity
 
@@ -85,7 +105,7 @@ When you disclose AI use, it shows honesty and confidence. Hiding it makes it lo
 
 - **The 70/30 Rule:** You do 15% specifying and 15% verifying; AI does 70% implementing.
 - Treat AI like an intern: give it clear tasks, but never blindly trust its work.
-- **Never use AI** for highly confidential data, exact calculations without verification, or critical legal/medical decisions.
+- **Use AI safely** by applying the right guardrails: anonymise data for privacy, verify numbers with proper tools, and have qualified experts approve legal or medical outputs.
 - **You are always responsible** for whatever the AI produces under your name.
 
 **Interview tip:** If a recruiter asks how you use AI in your work, mention the **70/30 rule**. Explain that you use AI to draft and implement, but you always take responsibility for specifying the requirements and strictly verifying the output. This shows you are a mature, safe professional, not just someone copying and pasting from a chatbot.

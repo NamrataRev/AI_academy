@@ -6,7 +6,7 @@
 
 By the end of this topic, you will be able to:
 
-- Write clear AI specifications across different domains (health, transport, etc.).
+- Write clear AI specifications across different domains (health, logistics, education, etc.).
 - Test if the AI followed your instructions accurately.
 - Iterate and improve your prompts when the AI's output is not quite right.
 
@@ -19,14 +19,14 @@ Writing a prompt is easy, but writing a **specification** is a professional skil
 **What Is It?**
 A good specification (or "spec") always provides context, the exact task, and the desired format. 
 
-**🚕 Think of it like this:** If you tell a taxi driver "take me to the city," you might end up anywhere. If you say "take me to 123 Main Street, avoid the highway, and drop me at the back entrance," you get exactly what you want. 
+**🍽️ Think of it like this:** If you walk into a restaurant and tell the waiter "bring me something good," you might end up with anything from sushi to a steak. If you say "a grilled chicken sandwich on whole wheat, no mayo, with a side salad," you get exactly what you want. Same skill, different medium.
 
 Here is how you write a tight specification in different fields:
 
 - **Health:** "Act as a fitness coach. Write a 3-day beginner workout plan for someone with no equipment. Format the output as a table with columns for Day, Exercise, Sets, and Reps."
-- **Transport:** "Draft a professional email to a logistics company asking for a quote to move 50 boxes from Mumbai to Delhi. Keep the tone polite but urgent, and keep it under 100 words."
+- **Logistics:** "Draft a professional email to a shipping company asking for a quote to move 50 boxes from London to Manchester. Keep the tone polite but urgent, and keep it under 100 words."
 - **Education:** "Summarise the water cycle for a 10-year-old. Use simple words and bullet points. Do not use complex scientific terms like 'precipitation' without explaining them first."
-- **Food:** "Create a vegetarian dinner recipe using only paneer, tomatoes, and basic spices. List the exact measurements and provide step-by-step instructions. The total cooking time must be under 30 minutes."
+- **Food:** "Create a vegetarian dinner recipe using only pasta, tomatoes, and basic spices. List the exact measurements and provide step-by-step instructions. The total cooking time must be under 30 minutes."
 - **Scheduling:** "Create a daily schedule for a student studying for exams. Block out 4 hours for studying, 1 hour for exercise, and 8 hours for sleep. Format it as an hourly timeline starting at 7:00 AM."
 
 ## 2.8 Assigning a Persona (The "Act As" Hack)
@@ -43,7 +43,7 @@ One of the easiest ways to improve your specification is to tell the AI *who* it
 ## 2.9 Testing a Specification: Did the AI Do What You Asked?
 
 **What Is It?**
-Testing means matching the AI's output against your original specification (remember the 15% 'Verify' step from the 70/30 rule).
+Testing means matching the AI's output against your original specification (remember the 15% 'Verify' step from the 70/30 rule). It also connects to the safe-use guardrails from section 2.6 — when working with sensitive data, precision, or accountability, your verification step must be even stricter.
 
 **Rules for Testing:**
 Never just read the output and say "looks good." Be a strict grader. 
@@ -74,8 +74,9 @@ Before you press enter on any important AI prompt, do a quick 3-step check:
 1. **Role Check:** Did I give the AI a persona? (e.g., "Act as an expert marketer").
 2. **Context Check:** Did I explain *why* I need this? (e.g., "This is for a presentation to beginners").
 3. **Format Check:** Did I tell it exactly how I want the answer? (e.g., "Give me a bulleted list").
+4. **Safety Check:** Does this task involve private data, exact numbers, or legal/medical decisions? If yes, have I applied the right guardrail — anonymisation, verification tools, or expert review? (See section 2.6 — How to Use AI Safely.)
 
-If you can check all three boxes, you have written a professional specification!
+If you can check all four boxes, you have written a professional specification!
 
 ## Key Takeaway
 
