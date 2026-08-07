@@ -189,8 +189,6 @@ flowchart TD
 - Forgetting to define what "done" looks like — without a measurable success criterion, you cannot verify the AI's output
 - Specifying only the happy path and being surprised when edge cases produce bad results
 
-> A specification is not the same as a wish. A wish describes a feeling — "users should feel the app is trustworthy." A specification describes an action and a measurable outcome — "display the total amount debited in bold, immediately after every credit card transaction." Your job is to translate wishes into specifications.
-
 ---
 
 ## Key Takeaways
@@ -202,5 +200,3 @@ flowchart TD
 - Specifying only the happy path and ignoring failure conditions is one of the most common and costly beginner mistakes
 - Writing specifications is a 100% human responsibility — the AI cannot write its own requirements
 - This skill directly connects to everything you build later in this program — a vague spec guarantees a useless AI output
-
-> **Interview tip:** If asked "how do you ensure AI produces reliable output?", the strongest answer starts with "by writing a precise, measurable specification before any AI call is made" — not with a technical fix after the fact.
