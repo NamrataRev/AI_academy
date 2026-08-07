@@ -8,7 +8,7 @@
 By the end of this topic, you should be able to:
 
 - Explain what a specification is and why it is the most important skill for anyone who directs AI to do work
-- Identify the four properties of a good specification — Testable, Bounded, Observable, Actionable (T.B.O.A.)
+- Identify the five properties of a good specification — Specific, Measurable, Achievable, Relevant, Time-bound (S.M.A.R.T.)
 - Tell the difference between a vague, weak specification and a precise, professional one
 - Break any task down into its inputs, expected outputs, and failure conditions before asking AI to do it
 - Write a well-formed specification for a simple real-world task
@@ -20,9 +20,9 @@ By the end of this topic, you should be able to:
 
 You already know that AI systems are probabilistic — they generate the most *likely* answer, not a guaranteed one. That single fact leads to the most important skill in this entire program: **if you don't tell an AI system precisely what you want, it will guess — and its guess may not match what you actually needed.**
 
-Think about ordering food on Swiggy. If you just type "send me food," the app has no idea what to do. But the moment you say "1 Paneer Butter Masala, 2 Butter Naan, deliver to Hostel Block C, Room 204, by 8 PM" — it knows exactly what to do. That second instruction is a specification.
+Think about ordering a ride on an app like Uber. If you just type "get me a car," the app has no idea what to do. But the moment you say "Send a 4-seater car to 123 Main Street, drop me at Central Airport by 8:00 AM" — it knows exactly what to do. That second instruction is a specification.
 
-A **specification** (often called a "spec") is a clear, precise description of what you want a system to do, written *before* you ask the AI to build or do anything. The AI cannot write a good spec for you — only you know what "good" actually means for your problem. Every time an AI does the wrong thing, it almost always traces back to a spec that was incomplete, vague, or untestable.
+A **specification** (often called a "spec") is a clear, precise description of what you want a system to do, written *before* you ask the AI to build or do anything. The AI cannot write a good spec for you — only you know what "good" actually means for your problem. Every time an AI does the wrong thing, it almost always traces back to a spec that was incomplete, vague, or unmeasurable.
 
 ---
 
@@ -39,50 +39,56 @@ Human language is naturally vague. If you tell a friend "get me something to eat
 
 ---
 
-## The Four Properties of a Good Specification (T.B.O.A.)
+## The Five Properties of a Good Specification (S.M.A.R.T.)
 
-A specification is only useful if it has all four of these properties. Miss even one and you open the door to a result you didn't want. Memorise them as **T.B.O.A.**
+A specification is only useful if it has all five of these properties. Miss even one and you open the door to a result you didn't want. Memorise them as **S.M.A.R.T.**
 
-**Testable** — you can check, with a clear yes or no, whether the output meets the requirement. Ask yourself: "Can I write a test that proves this was done correctly?"
-- Not testable: "make it engaging."
-- Testable: "open with a question and use no sentence longer than 20 words."
+**Specific** — the instruction is clear, detailed, and unambiguous, leaving no room for interpretation. Ask yourself: "Does this describe exactly what needs to be done, with no vagueness?"
+- Not specific: "make it engaging."
+- Specific: "open with a question directed at the reader and use no sentence longer than 20 words."
 
-**Bounded** — the task has clear limits — a maximum length, a specific scope, a defined set of inputs it must handle. Ask yourself: "Does this say how big, how long, or how much?"
-- Unbounded: "summarise this report."
-- Bounded: "summarise this report in five bullets, under 100 words total."
+**Measurable** — you can check, with a clear yes or no, whether the output meets the requirement using concrete criteria. Ask yourself: "Can I measure or count something to verify this was done correctly?"
+- Not measurable: "summarise this report."
+- Measurable: "summarise this report in five bullets, under 100 words total."
 
-**Observable** — you can actually see or measure the output to judge it. Ask yourself: "Can I look at the result and judge it against the spec?"
-- Not observable: "make it sound more professional."
-- Observable: "remove contractions, remove exclamation marks, use full job titles on first mention."
+**Achievable** — the task is realistic and within the system's capabilities, given the available inputs and constraints. Ask yourself: "Can the system actually accomplish this with what it has?"
+- Not achievable: "predict the exact stock price of Reliance tomorrow."
+- Achievable: "analyse the last 30 days of Reliance stock data and list the three most significant price changes with dates."
 
-**Actionable** — the instruction tells the system what to *do*, not just what outcome you vaguely wish for. Ask yourself: "Does this tell the system a concrete action to take?"
-- Not actionable: "don't be vague."
-- Actionable: "give one concrete example after each definition."
+**Relevant** — the instruction directly serves the actual goal or problem you are trying to solve. Ask yourself: "Does this task actually contribute to what I need?"
+- Not relevant: "add a joke to the error message for a banking app."
+- Relevant: "show the specific failure reason — insufficient balance, bank server down, or incorrect PIN — so the user knows what to fix."
+
+**Time-bound** — the task has a clear deadline or time constraint that defines when it must be completed or how fast it must respond. Ask yourself: "Does this specify when it must be done or how quickly it must happen?"
+- Not time-bound: "send an alert when attendance is low."
+- Time-bound: "send an email alert every Friday at 6 PM to any student whose attendance falls below 75%."
 
 
-**Real-life analogy:** Imagine giving directions to a Swiggy delivery partner. "Go somewhere near Koramangala" is not testable, bounded, observable, or actionable — the rider has no idea if they've succeeded. "Deliver to Flat 302, Sunrise Apartments, 80 Feet Road, Koramangala 4th Block, by 8:00 PM" gives them everything they need. That is a specification.
+**Real-life analogy:** Imagine giving shipping instructions for an online order. "Send it somewhere in New York" is not specific, measurable, achievable, relevant, or time-bound — the courier has no idea if they've succeeded. "Deliver to Apartment 4B, 123 Market Street, New York, NY 10001, by Friday 5:00 PM" gives them everything they need — it's specific (exact address), measurable (you can verify delivery), achievable (it's a valid address), relevant (it's the right destination), and time-bound (by Friday). That is a specification.
 
 <div style="display:flex;align-items:flex-start;gap:24px;margin:16px 0">
 <div style="flex:1">
 
 ```mermaid
 flowchart TD
-    A[Specification] --> B[Testable\nCan I verify it?]
-    A --> C[Bounded\nAre there clear limits?]
-    A --> D[Observable\nCan I see the output?]
-    A --> E[Actionable\nDoes it say what to DO?]
+    A[Specification] --> B[Specific\nIs it clear and unambiguous?]
+    A --> C[Measurable\nCan I verify it?]
+    A --> D[Achievable\nCan it realistically be done?]
+    A --> E[Relevant\nDoes it serve the goal?]
+    A --> F[Time-bound\nIs there a deadline?]
 ```
 
 </div>
 <div style="flex:1">
 
-**Remember it as T.B.O.A.**
+**Remember it as S.M.A.R.T.**
 
-Think of it like a Zomato order:
-- **Testable** — did the right dish arrive?
-- **Bounded** — is it within the delivery area and time?
-- **Observable** — you can see and taste it
-- **Actionable** — "deliver Paneer Masala to Room 204" is a concrete action
+Think of it like ordering at a coffee shop:
+- **Specific** — "1 large iced caramel latte with oat milk" not just "give me coffee"
+- **Measurable** — did you get the exact size, flavor, and milk type requested?
+- **Achievable** — the barista actually has those ingredients in stock
+- **Relevant** — the drink matches what you actually want to drink
+- **Time-bound** — "ready for pickup in 5 minutes" sets a clear deadline
 
 </div>
 </div>
@@ -95,19 +101,21 @@ This is the most common beginner mistake — writing a wish instead of a specifi
 
 **Bad specification:** *"Make it better."*
 
-This fails all four properties:
-- Not testable — "better" according to what measure?
-- Not bounded — better by how much, in what way?
-- Not observable — there's no way to check against a fixed standard
-- Not actionable — it tells the AI nothing about what action to take
+This fails all five properties:
+- Not specific — "better" in what way exactly?
+- Not measurable — "better" according to what measure?
+- Not achievable — without clarity, the system cannot determine what to do
+- Not relevant — we don't even know if "better" addresses the actual problem
+- Not time-bound — no deadline or time constraint is given
 
-**Good specification:** *"Rewrite this paragraph at a Grade 8 reading level, using simple sentences, keeping the meaning unchanged, in no more than 80 words."*
+**Good specification:** *"Rewrite this paragraph at a Grade 8 reading level, using simple sentences, keeping the meaning unchanged, in no more than 80 words, within 2 minutes."*
 
-This passes all four:
-- Testable — you can run a readability check and count the words
-- Bounded — hard limit of 80 words is given
-- Observable — you can read the result and compare it against "Grade 8 level" and word count
-- Actionable — "rewrite," "use simple sentences," and "keep the meaning unchanged" are concrete actions
+This passes all five:
+- Specific — "rewrite," "Grade 8 level," "simple sentences," "keep meaning unchanged" are precise instructions
+- Measurable — you can run a readability check and count the words
+- Achievable — the AI can realistically rewrite a paragraph under these constraints
+- Relevant — rewriting for clarity directly serves the goal of making content accessible
+- Time-bound — the 2-minute constraint sets a clear completion window
 
 **More real-world examples you'll actually relate to:**
 
@@ -117,7 +125,7 @@ This passes all four:
 **Bad specs ❌**
 - "Make the order confirmation message nicer."
 - "Warn students who are missing too much class."
-- "Handle failed UPI payments well."
+- "Handle failed credit card payments well."
 
 </div>
 <div style="flex:1">
@@ -125,7 +133,7 @@ This passes all four:
 **Good specs ✅**
 - "Rewrite the order confirmation SMS to be under 160 characters, include the order ID and expected delivery time, and use a friendly but professional tone."
 - "Send an email alert to any student whose attendance falls below 75% in any subject, listing the subject name and current percentage, sent every Friday at 6 PM."
-- "If a UPI payment fails, show the user the specific reason — insufficient balance, bank server down, or incorrect PIN — within 3 seconds, and offer a Retry button."
+- "If a credit card payment fails, show the user the specific reason — insufficient funds, expired card, or incorrect CVV — within 3 seconds, and offer a Retry button."
 
 </div>
 </div>
@@ -140,28 +148,28 @@ Every good specification, no matter the domain, breaks into three parts. Ask the
 flowchart LR
     A[What INPUT\nwill it receive?] --> B[What OUTPUT\nmust it produce?]
     B --> C[What FAILURE CONDITIONS\nmust it handle?]
-    C --> D[Complete, testable\nspecification]
+    C --> D[Complete, measurable\nspecification]
 ```
 
 - **Input** — what information does the system start with? For example: a student's marks, a scanned ID card, a customer's order details
 - **Expected output** — what exact result must come out the other end? For example: a confirmation SMS, an approval or rejection decision, a formatted report
 - **Failure conditions** — what could go wrong, and what should happen in each case? A specification that only describes the "happy path" — when everything goes right — is an incomplete specification. Real systems fail in real ways, and your spec must say what correct failure behaviour looks like too
 
-**Worked breakdown — IRCTC ticket refund:**
+**Worked breakdown — Airline ticket cancellation:**
 
-- Input: ticket PNR number, cancellation date, ticket fare, class of travel
-- Expected output: refund amount calculated per Indian Railways cancellation rules, displayed to the user within 5 seconds
-- Failure conditions: invalid PNR → show "PNR not found" error; cancellation after chart preparation → show "no refund eligible, contact TDR"; system timeout → show "please retry" with no silent failure
+- Input: booking reference (PNR), cancellation date, ticket fare, fare type (refundable/non-refundable)
+- Expected output: refund amount calculated per airline cancellation rules, displayed to the user within 5 seconds
+- Failure conditions: invalid booking reference → show "Booking not found" error; cancellation after check-in closed → show "No refund eligible, contact support"; system timeout → show "Please retry" with no silent failure
 
 ```mermaid
 flowchart TD
-    A[User enters PNR number\nand cancellation details] --> B{Is PNR valid?}
-    B -- No --> C[Show 'PNR not found' error]
+    A[User enters booking reference\nand cancellation details] --> B{Is booking valid?}
+    B -- No --> C[Show 'Booking not found' error]
     C --> End1([End])
-    B -- Yes --> D{Is cancellation after\nchart preparation?}
-    D -- Yes --> E[Show 'No refund eligible\nContact TDR']
+    B -- Yes --> D{Is cancellation after\ncheck-in closed?}
+    D -- Yes --> E[Show 'No refund eligible\nContact support']
     E --> End2([End])
-    D -- No --> F[Calculate refund amount\nper Railways rules]
+    D -- No --> F[Calculate refund amount\nper airline rules]
     F --> G{System response\nwithin 5 seconds?}
     G -- No --> H[Show 'Please retry'\nNo silent failure]
     H --> End3([End])
@@ -177,22 +185,22 @@ flowchart TD
 
 ### Common Beginner Mistakes
 
-- Writing goals instead of specifications — "improve user experience" instead of a concrete, testable instruction
-- Forgetting to define what "done" looks like — without an observable success criterion, you cannot verify the AI's output
+- Writing goals instead of specifications — "improve user experience" instead of a concrete, measurable instruction
+- Forgetting to define what "done" looks like — without a measurable success criterion, you cannot verify the AI's output
 - Specifying only the happy path and being surprised when edge cases produce bad results
 
-> A specification is not the same as a wish. A wish describes a feeling — "users should feel the app is trustworthy." A specification describes an action and a measurable outcome — "display the total amount debited in bold, immediately after every UPI transaction." Your job is to translate wishes into specifications.
+> A specification is not the same as a wish. A wish describes a feeling — "users should feel the app is trustworthy." A specification describes an action and a measurable outcome — "display the total amount debited in bold, immediately after every credit card transaction." Your job is to translate wishes into specifications.
 
 ---
 
 ## Key Takeaways
 
 - A specification is a precise, written description of a task — input, output, and failure conditions — given to an AI system before it starts working
-- A good specification is **Testable, Bounded, Observable, and Actionable** — remember it as **T.B.O.A.**
+- A good specification is **Specific, Measurable, Achievable, Relevant, and Time-bound** — remember it as **S.M.A.R.T.**
 - "Make it better" is a wish, not a specification. "Rewrite at Grade 8 level, max 80 words" is a specification
 - Every task specification must cover three parts: **input → expected output → failure conditions**
 - Specifying only the happy path and ignoring failure conditions is one of the most common and costly beginner mistakes
 - Writing specifications is a 100% human responsibility — the AI cannot write its own requirements
 - This skill directly connects to everything you build later in this program — a vague spec guarantees a useless AI output
 
-> **Interview tip:** If asked "how do you ensure AI produces reliable output?", the strongest answer starts with "by writing a precise, testable specification before any AI call is made" — not with a technical fix after the fact.
+> **Interview tip:** If asked "how do you ensure AI produces reliable output?", the strongest answer starts with "by writing a precise, measurable specification before any AI call is made" — not with a technical fix after the fact.
