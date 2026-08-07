@@ -86,3 +86,6 @@ If you can check all four boxes, you have written a professional specification!
 - The better your specification, the less time you spend iterating.
 
 **Interview tip:** When discussing AI, do not say "I am good at prompting." Instead say, "I am good at writing strict specifications and iterating based on output gaps." This language immediately separates you from a beginner.
+
+## References
+- [OpenAI: Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)

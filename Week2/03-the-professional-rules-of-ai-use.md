@@ -109,3 +109,6 @@ When you disclose AI use, it shows honesty and confidence. Hiding it makes it lo
 - **You are always responsible** for whatever the AI produces under your name.
 
 **Interview tip:** If a recruiter asks how you use AI in your work, mention the **70/30 rule**. Explain that you use AI to draft and implement, but you always take responsibility for specifying the requirements and strictly verifying the output. This shows you are a mature, safe professional, not just someone copying and pasting from a chatbot.
+
+## References
+- [IBM: What are AI Hallucinations?](https://www.ibm.com/topics/ai-hallucinations)

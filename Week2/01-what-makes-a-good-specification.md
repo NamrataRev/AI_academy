@@ -200,3 +200,7 @@ flowchart TD
 - Specifying only the happy path and ignoring failure conditions is one of the most common and costly beginner mistakes
 - Writing specifications is a 100% human responsibility — the AI cannot write its own requirements
 - This skill directly connects to everything you build later in this program — a vague spec guarantees a useless AI output
+
+## References
+- [Atlassian: How to write SMART goals (with examples)](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals)
+- [MindTools: SMART Goals - How to Make Your Goals Achievable](https://www.mindtools.com/a4wo118/smart-goals)

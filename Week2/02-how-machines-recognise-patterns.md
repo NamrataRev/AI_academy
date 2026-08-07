@@ -135,3 +135,7 @@ When humans solve problems, we use common sense to know that grass does not *mak
 - **Pattern recognition handles the messy real world** much better than strict, human-written rules.
 
 **Interview tip:** If you are asked how AI differs from traditional software, explain that traditional software follows rules written by humans, while AI uses pattern recognition to find its own rules from data. This shows you understand the core mechanism of modern AI.
+
+## References
+- [IBM: What is Machine Learning?](https://www.ibm.com/topics/machine-learning)
+- [IBM: What is AI bias?](https://www.ibm.com/topics/ai-bias)
