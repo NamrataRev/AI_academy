@@ -1,6 +1,6 @@
 # How Machines Recognise Patterns
 
-## Pattern Recognition 
+
 
 ## Learning Objectives
 
