@@ -32,7 +32,7 @@ Open your email inbox. Notice how spam messages are automatically sorted into th
 
 ## 2.2 How Machines Find the Rules
 
-When engineers build AI, they do not manually type out the rules for every situation (because the real world is too messy for pure rules, as we saw in Week 1).
+When engineers build AI, they do not manually type out the rules for every situation (because the real world is too messy for pure rules, as we saw previously).
 
 Instead, imagine you have been given a massive pile of 10,000 photographs. Half of them are labelled "cat" and the other half are labelled "not cat." Your job is to figure out what makes a photo a "cat photo" — but you cannot ask anyone. You can only look at the pictures and find the pattern yourself.
 

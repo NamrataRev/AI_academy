@@ -23,7 +23,7 @@ Pattern recognition is the process where a computer looks at raw data (like imag
 
 ## 2.2 How Machines Find the Rules
 
-When engineers build AI, they do not manually type out the rules for every situation (because the real world is too messy for pure rules, as we saw in Week 1). 
+When engineers build AI, they do not manually type out the rules for every situation (because the real world is too messy for pure rules, as we saw previously). 
 
 Instead, the process looks like this:
 
