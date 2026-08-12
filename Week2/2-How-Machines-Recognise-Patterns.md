@@ -16,7 +16,7 @@ In the last topic, you learned to write precise specifications — telling a mac
  
 Think about how you learned to recognise a dog. Nobody gave you a checklist — "must have 4 legs, a tail, fur." Someone just pointed at different dogs over and over, and your brain figured out the pattern on its own. Machines learn in the exact same way.
  
-## 2.1 What is Pattern Recognition?
+## 2.5 What is Pattern Recognition?
 
 **What Is It?**
 **Pattern recognition** is the process by which a machine looks at many repeated examples and works out a general rule — without a human writing that rule down directly. Understanding this explains both where AI's abilities come from and where its limits are.
@@ -30,7 +30,7 @@ not from rules someone wrote, but from repeated examples they were shown.
 **A Quick Example You Already Use:**
 Open your email inbox. Notice how spam messages are automatically sorted into the junk folder? No human sits at a desk reading your emails. Instead, an AI has looked at millions of emails and learned the *patterns* that make an email spammy — certain phrases like "You have won!", suspicious sender addresses, too many links, ALL-CAPS subject lines. When a new email arrives, the AI checks it against those learned patterns and sorts it instantly. That is pattern recognition in action, running quietly in the background of your daily life.
 
-## 2.2 How Machines Find the Rules
+## 2.6 How Machines Find the Rules
 
 When engineers build AI, they do not manually type out the rules for every situation (because the real world is too messy for pure rules, as we saw previously).
 
@@ -60,7 +60,7 @@ The key insight is that nobody programmed the rule "cats have whiskers." The mac
 - **Model Built:** The AI creates its own internal scoring rule for "spamminess."
 - **Result:** When a new email arrives, the AI scores it and sorts it — without a human having to write or maintain a list of banned words.
 
-## 2.3 Everyday Examples of Pattern Recognition
+## 2.7 Everyday Examples of Pattern Recognition
 
 You interact with machine pattern recognition constantly:
 
@@ -68,7 +68,7 @@ You interact with machine pattern recognition constantly:
 - **Netflix Recommendations:** It finds a pattern in the types of movies you watch (e.g., "you always watch action movies on Friday nights") and recommends similar ones.
 - **Medical Diagnosis:** AI scans hundreds of thousands of X-rays to find the tiny visual patterns that indicate a specific disease, often spotting things the human eye misses.
 
-## 2.4 Why Patterns Beat Fixed Rules
+## 2.8 Why Patterns Beat Fixed Rules
 
 To see the difference clearly, imagine the same task — **"identify whether a photo contains a chair"** — handled two different ways:
 
@@ -101,7 +101,7 @@ flowchart TD
 
 If you write a rule that says a "chair" has four legs, the system will fail when it encounters a modern office chair with a single base, a beanbag, or a hanging swing chair. But if a machine uses **pattern recognition**, it understands the overall shape and visual context of what people sit on, allowing it to correctly identify chairs it has never seen before.
 
-## 2.5 Why Data Quality Matters (Bad Data = Bad Patterns)
+## 2.9 Why Data Quality Matters (Bad Data = Bad Patterns)
 
 **What Is It?**
 Because AI learns by finding patterns in the data you give it, the quality of that data is everything. If the data is flawed, the AI's "hidden rule" will be flawed too. This is often called **AI Bias**.
@@ -114,7 +114,7 @@ However, for the past 10 years, your company mostly hired men from a specific un
 
 **Rule of thumb:** An AI is only as smart (and as fair) as the data it learns from.
 
-## 2.6 When Pattern Recognition Fails (Wrong Correlations)
+## 2.10 When Pattern Recognition Fails (Wrong Correlations)
 
 **What Is It?**
 Sometimes, machines find a pattern that is technically there, but completely meaningless in the real world. This happens when the AI confuses **correlation** (two things happening at the same time) with **causation** (one thing causing the other).
