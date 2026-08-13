@@ -78,64 +78,7 @@ Explaining every part:
 - The division at the bottom — makes sure all the final percentages add up to exactly 100%. Think of it like converting raw exam marks into a percentage — you divide each student's marks by the total marks available so everything sits on the same scale.
 
 ### Worked Calculation — Three Candidate Tokens
-
-Using Delhi (2.0), Mumbai (1.0), Chennai (0.5) from the example above:
-
-**Case 1 — T = 1 (neutral, no reshaping)**
-
-```
-exp(2.0 / 1) = exp(2.0) = 7.389
-exp(1.0 / 1) = exp(1.0) = 2.718
-exp(0.5 / 1) = exp(0.5) = 1.649
-Sum = 7.389 + 2.718 + 1.649 = 11.756
-
-P(Delhi)   = 7.389 / 11.756 = 0.629 → 62.9%
-P(Mumbai)  = 2.718 / 11.756 = 0.231 → 23.1%
-P(Chennai) = 1.649 / 11.756 = 0.140 → 14.0%
-Check: 62.9 + 23.1 + 14.0 = 100.0% ✓
-```
-
-**Case 2 — T = 0.5 (LOW temperature)**
-
-Dividing each logit by 0.5 is the same as multiplying it by 2 — this amplifies the differences between scores:
-
-```
-exp(2.0 / 0.5) = exp(4.0) = 54.598
-exp(1.0 / 0.5) = exp(2.0) = 7.389
-exp(0.5 / 0.5) = exp(1.0) = 2.718
-Sum = 54.598 + 7.389 + 2.718 = 64.705
-
-P(Delhi)   = 54.598 / 64.705 = 0.844 → 84.4%
-P(Mumbai)  = 7.389  / 64.705 = 0.114 → 11.4%
-P(Chennai) = 2.718  / 64.705 = 0.042 → 4.2%
-Check: 84.4 + 11.4 + 4.2 = 100.0% ✓
-```
-
-Delhi jumped from 62.9% to **84.4%** — the model becomes much more confident and predictable, almost always choosing the top answer.
-
-**Case 3 — T = 2 (HIGH temperature)**
-
-```
-exp(2.0 / 2) = exp(1.0)  = 2.718
-exp(1.0 / 2) = exp(0.5)  = 1.649
-exp(0.5 / 2) = exp(0.25) = 1.284
-Sum = 2.718 + 1.649 + 1.284 = 5.651
-
-P(Delhi)   = 2.718 / 5.651 = 0.481 → 48.1%
-P(Mumbai)  = 1.649 / 5.651 = 0.292 → 29.2%
-P(Chennai) = 1.284 / 5.651 = 0.227 → 22.7%
-Check: 48.1 + 29.2 + 22.7 = 100.0% ✓
-```
-
-Delhi dropped to only **48.1%** — nearly a coin flip. The model is now far more likely to pick a less obvious word, producing more varied but less predictable text.
-
-**Temperature effect on P(Delhi) — same three candidate words:**
-
-```
-T = 0.5  ████████████████████████████████████████  84.4%  (sharp — very predictable)
-T = 1.0  ████████████████████████████               62.9%  (neutral)
-T = 2.0  ████████████████████                       48.1%  (flat — more random)
-```
+![Temperature in AI](images/TempEx.png)
 
 ### Low vs High Temperature — Side by Side
 
