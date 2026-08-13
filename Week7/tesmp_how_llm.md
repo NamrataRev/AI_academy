@@ -36,14 +36,6 @@ At each step of generating text, an LLM does not "know" one correct next word. I
 
 Notice that 85 + 10 + 5 = 100%. The model always spreads its confidence across all possibilities so the total adds up to 100%. It is not saying "this is definitely a cat." It is saying "if I had to bet, I would put 85% of my money on cat." LLMs work the exact same way — for every word they might generate next.
 
-### Key Terms
-
-| Term | Simple Meaning |
-|---|---|
-| **Token** | A chunk of text the model reads or writes at a time — often a whole word, sometimes part of a word |
-| **Logit** | A raw, unprocessed score the model calculates for each possible next token — higher logit means the model prefers that token more, but logits are not yet valid probabilities — they don't sum to 1 and can be negative |
-| **Softmax** | The mathematical function that converts a list of logits into a valid probability distribution — all values between 0 and 1, summing to exactly 1 |
-| **Sampling** | The process of actually picking one token from the probability distribution to output — this is where the variation in LLM responses comes from |
 
 **A simplified illustration** — logits (raw scores) the model calculated for the next word after "The capital of India is":
 
@@ -80,10 +72,10 @@ P(token_i) = exp(logit_i / T) / [ sum of exp(logit_j / T) for every token j ]
 ```
 
 Explaining every part:
-- `logit_i` — the raw score for one specific candidate token
-- `T` — the temperature value you choose. T = 1 is neutral (no reshaping). T < 1 sharpens the distribution. T > 1 flattens it
-- `exp(x)` — means "e raised to the power of x," where **e ≈ 2.71828** — a fixed mathematical constant, similar in spirit to π. Use the `eˣ` button on any scientific calculator
-- The bottom part (the sum) ensures all final probabilities add up to exactly 1 — this step is called **normalising**
+- logit_i — the raw score for the word you are calculating the probability for. Think of it as that word's points before grading.
+- T — the temperature you set. T = 1 means no change. Below 1 makes the winner pull further ahead. Above 1 brings everyone closer together.
+- exp(x) — a standard maths operation available on any calculator using the eˣ button. You do not need to know why it works — just know it converts any score into a positive number, which is needed before we can turn scores into percentages.
+- The division at the bottom — makes sure all the final percentages add up to exactly 100%. Think of it like converting raw exam marks into a percentage — you divide each student's marks by the total marks available so everything sits on the same scale.
 
 ### Worked Calculation — Three Candidate Tokens
 
