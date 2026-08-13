@@ -21,7 +21,7 @@ Probability is the mathematical language of uncertainty. It is how we quantify l
 
 ---
 
-## 7.1 Probability Basics — Likelihood, Events, Outcomes
+## Probability Basics — Likelihood, Events, Outcomes
 
 At its core, **probability** is simply a number between 0 and 1 that represents how likely something is to happen. A probability of 0 means the event is impossible, and 1 means it is absolutely certain.
 
@@ -41,7 +41,7 @@ In AI, we rarely deal with simple dice rolls. Instead, probabilities represent a
 
 ---
 
-## 7.2 Conditional Probability — P(A given B)
+## Conditional Probability — P(A given B)
 
 In the real world, events don't happen in isolation. The likelihood of one event often depends on whether another event has already happened. This is called **conditional probability**.
 
@@ -59,7 +59,7 @@ In AI, conditional probability is everywhere:
 
 ---
 
-## 7.3 Bayes' Theorem Intuition — Updating Belief with New Evidence
+## Bayes' Theorem Intuition — Updating Belief with New Evidence
 
 Bayes' theorem is one of the most important concepts in AI and statistics. At its heart, it provides a mathematical rule for **updating our beliefs when we receive new evidence**.
 

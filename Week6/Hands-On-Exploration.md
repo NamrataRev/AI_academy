@@ -26,7 +26,7 @@ The goal: build strong visual intuition for something you can currently only pic
 
 ---
 
-## 6.17 What Is the Embedding Projector?
+## What Is the Embedding Projector?
 
 The **TensorFlow Embedding Projector** (available free at [projector.tensorflow.org](https://projector.tensorflow.org/)) is an official, browser-based visualisation tool. It takes real word embeddings — vectors with hundreds of dimensions, just like the mango and banana example you saw earlier — and **compresses** them down to just 2 or 3 dimensions you can actually see on screen.
 
@@ -42,7 +42,7 @@ Think of it like crushing a 3D object into a flat shadow on the floor. The shado
 
 ---
 
-## 6.18 Guided Activity — Step by Step
+## Guided Activity — Step by Step
 
 Follow these steps in your browser. No installation, login, or coding required.
 
@@ -65,7 +65,7 @@ Search for **"king"**, **"man"**, **"woman"**, and **"queen"** individually, and
 
 ---
 
-## 6.19 Questions to Answer While Exploring
+## Questions to Answer While Exploring
 
 As you explore the tool, these questions will help you connect what you see visually to the mathematics you already understand. Write down your observations — you will need them for reflection.
 
@@ -76,7 +76,7 @@ As you explore the tool, these questions will help you connect what you see visu
 
 ---
 
-## 6.20 Important Limitations to Know
+## Important Limitations to Know
 
 **The visualisation is a compression, not the real thing.** The actual embedding has 100+ dimensions. The picture you see has been squeezed into 2 or 3. Two words can look reasonably close in the picture but be less similar than they appear — or vice versa. Treat the visualisation as a helpful *intuition tool*, not a mathematically exact reading.
 

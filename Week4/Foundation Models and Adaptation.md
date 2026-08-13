@@ -38,7 +38,7 @@ This is why the AI industry follows one simple idea: **build once, adapt many ti
 
 ---
 
-## 4.1 Foundation Models — Trained Once at Scale
+## Foundation Models — Trained Once at Scale
 
 A **Foundation Model** is a large AI model that has been trained on a massive, broad dataset (like a huge chunk of the internet) so that it understands general language, reasoning, and world knowledge. It is designed to be highly versatile—meaning it can be used for many different tasks out of the box, even if it wasn't specifically trained for them.
 
@@ -65,7 +65,7 @@ Today, pre-training a cutting-edge foundation model requires clusters of tens of
 
 ---
 
-## 4.2 Fine-Tuning — Adapting to Your Domain
+## Fine-Tuning — Adapting to Your Domain
 
 While a foundation model knows a little bit about everything, it might not know exactly how *your* specific business works. 
 

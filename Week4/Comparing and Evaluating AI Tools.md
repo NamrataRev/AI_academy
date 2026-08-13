@@ -32,7 +32,7 @@ design a **measurable evaluation rubric** and present **evidence-based recommend
 
 ---
 
-## 4.11 Public Benchmarks vs Custom Evals
+## Public Benchmarks vs Custom Evals
 
 When new AI models are released, companies publish scores on public tests like:
 - **MMLU** (Massive Multitask Language Understanding) — tests general knowledge 
@@ -59,7 +59,7 @@ task you need it to do.
 
 ---
 
-## 4.12 Common and General Evaluations
+## Common and General Evaluations
 
 While custom evals are essential for specific use cases, there are standard evaluation frameworks and metrics you should be familiar with. 
 
@@ -78,7 +78,7 @@ Depending on your industry, you will need to design evals specific to the tasks 
 
 ---
 
-## 4.13 Designing a Custom Evaluation Rubric
+## Designing a Custom Evaluation Rubric
 
 A custom eval rubric is a structured scoring system that tests different AI tools 
 against the exact same set of criteria — so you can compare them fairly.
@@ -135,7 +135,7 @@ of marking them yourself — faster, more consistent, and scalable.
 
 ---
 
-## 4.14 Presenting a Findings-Based Recommendation
+## Presenting a Findings-Based Recommendation
 
 Once you have run your evaluation, you must present your findings to decision-makers. 
 Recommendations must be based on **evidence, not opinion.**
@@ -168,7 +168,7 @@ Recommendations must be based on **evidence, not opinion.**
 
 ---
 
-## 4.15 Worked Example — Choosing an AI Tool for a College Doubt-Clearing App
+## Worked Example — Choosing an AI Tool for a College Doubt-Clearing App
 
 **Scenario:** Your team is building an AI assistant for engineering students to ask subject 
 doubts. You need to choose between two models — Model A and Model B.

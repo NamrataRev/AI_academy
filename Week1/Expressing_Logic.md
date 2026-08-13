@@ -23,7 +23,7 @@ There are two friendly tools for this: **pseudocode** (writing the logic in plai
 
 This also connects directly to AI. When you type a detailed instruction into ChatGPT or any AI tool, you are basically writing pseudocode — just in plain English. The more precise and step-by-step your instruction is, the better the AI understands it, and the better the result you get back. Vague in, vague out. Clear in, clear out.
 
-## 1.10 Pseudocode — Writing Logic in Plain English Before Writing Code
+## Pseudocode — Writing Logic in Plain English Before Writing Code
 
 ### What Is Pseudocode?
 
@@ -71,7 +71,7 @@ Notice how it reads almost like English, but with structure: a clear START, clea
 - Forgetting edge cases (What if the ATM has no cash left? What if the user cancels midway?).
 - Writing pseudocode in strict programming syntax — that defeats its whole purpose of being simple and language-independent.
 
-## 1.11 Flowcharts — Visualising Logic with Standard Shapes and Arrows
+## Flowcharts — Visualising Logic with Standard Shapes and Arrows
 
 ### What Is a Flowchart?
 

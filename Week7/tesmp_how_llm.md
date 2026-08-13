@@ -22,7 +22,7 @@ Understanding this matters because a setting called **temperature** — which co
 
 ---
 
-## 7.4 Why LLMs Output a Probability Distribution, Not a Single Fixed Answer
+## Why LLMs Output a Probability Distribution, Not a Single Fixed Answer
 
 At each step of generating text, an LLM does not "know" one correct next word. Instead, it calculates a **probability distribution** — a full list of every possible next word (technically a "token") in its vocabulary, each paired with a probability of how likely it is to come next, with all these probabilities adding up to exactly 1 (100%).
 
@@ -58,7 +58,7 @@ flowchart LR
 
 ---
 
-## 7.5 Temperature — Controlling How Confident or Creative the Output Is
+## Temperature — Controlling How Confident or Creative the Output Is
 
 **Temperature** is a number (usually between 0 and 2) that controls how sharp or flat the model's probability distribution becomes before a token is sampled.
 

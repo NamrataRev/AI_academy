@@ -23,7 +23,7 @@ The word sounds fancy, but you've been using algorithms your whole life. Every t
 
 ---
 
-## 1.12 What Makes Something an Algorithm?
+## What Makes Something an Algorithm?
 
 An **algorithm** is a finite sequence of well-defined, unambiguous steps that takes some input and produces a specific output, solving a particular problem.
 
@@ -39,7 +39,7 @@ That predictability is what makes algorithms so powerful. Computers can't do "co
 
 ---
 
-## 1.13 Algorithms in Everyday Life
+## Algorithms in Everyday Life
 
 Algorithms didn't start with computers — humans have used them for thousands of years. Here are three you've probably used this week:
 
@@ -62,7 +62,7 @@ Algorithms didn't start with computers — humans have used them for thousands o
 
 ---
 
-## 1.14 The Four Properties of a Good Algorithm (F.D.I.O.E.)
+## The Four Properties of a Good Algorithm (F.D.I.O.E.)
 
 Not every set of steps qualifies. For something to truly be an algorithm, it must have 
 all five of these properties. Memorise them as **F.D.I.O.E.** — you will be asked this 
@@ -97,7 +97,7 @@ in exams and interviews.
   correct but practically worthless
 ---
 
-## 1.15 Testing F.D.I.O.E.: Maggi vs Vibes-Based Cooking
+## Testing F.D.I.O.E.: Maggi vs Vibes-Based Cooking
 
 **Maggi noodles — passes all five checks ✅**
 
@@ -129,7 +129,7 @@ in exams and interviews.
 
 ---
 
-## 1.16 Worked Example: Library Book Return
+## Worked Example: Library Book Return
 
 Let's design an algorithm for returning a book at your college library, then verify 
 it against F.D.I.O.E.

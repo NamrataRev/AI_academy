@@ -26,7 +26,7 @@ Why now, before you've even opened Python? Because a vague starting point always
 
 ---
 
-## 1.17 Choosing Your Domain
+## Choosing Your Domain
 
 A domain is simply an area or industry where a real problem exists — healthcare, banking, education, agriculture, transport, food delivery, or anything else.
 
@@ -40,7 +40,7 @@ The key point: AI-Native Engineers don't build "AI in general." They build AI-po
 
 ---
 
-## 1.18 Writing a 3-Sentence Problem Statement
+## Writing a 3-Sentence Problem Statement
 
 A problem statement is a short, precise description of a real problem — written clearly enough that anyone reading it understands exactly what the issue is, who faces it, and why it matters. Crucially, it does **not** describe how you'll solve it. That comes later.
 
@@ -58,7 +58,7 @@ Beginners almost always jump straight to the solution — "I'll build a chatbot!
 
 > "Students have trouble with their studies. AI can help them learn better. We should build something for this."
 
-This fails the Definite test from Topic 4. Which students? What specific difficulty? "Learn better" could mean a thousand different things.
+This fails the Definite test from the Algorithmic Thinking topic. Which students? What specific difficulty? "Learn better" could mean a thousand different things.
 
 **Strong problem statement:**
 
@@ -85,7 +85,7 @@ Notice how this version applies everything from previous topics:
 
 ---
 
-## 1.19 Worked Example — Railway Travel
+## Worked Example — Railway Travel
 
 **Step 1 — Start broad (too vague):**
 
@@ -109,7 +109,7 @@ Passengers on waitlisted tickets often don't know their real chances of confirma
 
 > "Passengers with waitlisted railway tickets often have no clear sense of whether their ticket will be confirmed, so they repeatedly refresh the IRCTC app out of anxiety in the days before travel. This uncertainty causes unnecessary stress and makes it hard for passengers to plan backup travel options in time. A good solution would give waitlisted passengers a clear, realistic, and regularly updated sense of their confirmation chances well before the journey date."
 
-**Step 5 — Verify against F.D.I.O. from Topic 4:**
+**Step 5 — Verify against F.D.I.O. from the Algorithmic Thinking topic:**
 
 - **Finite** — scoped to a specific window before the journey date, not open-ended
 - **Definite** — names a specific group (waitlisted passengers) and a specific difficulty (no confirmation-chance visibility)

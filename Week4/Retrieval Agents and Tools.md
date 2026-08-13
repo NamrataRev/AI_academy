@@ -23,7 +23,7 @@ To solve these problems, we don't just use the model by itself. We wrap it in a 
 
 ---
 
-## 4.3 Retrieval-Augmented Generation (RAG)
+## Retrieval-Augmented Generation (RAG)
 
 **Retrieval-Augmented Generation (RAG)** is a technique that gives the AI access to a private, external library of information at the exact moment you ask it a question.
 
@@ -54,7 +54,7 @@ sequenceDiagram
 
 ---
 
-## 4.4 Agents — Adding Autonomy
+## Agents — Adding Autonomy
 
 Most people use AI like a vending machine — you press a button, it gives you one 
 thing, and it stops. That is a plain chatbot. You type a prompt, it generates a reply, 
@@ -117,7 +117,7 @@ car that takes you there.
 - Never give an agent permission to take an irreversible action without a human 
   reviewing and approving it first
 
-## 4.5 Tool Use (Function Calling)
+## Tool Use (Function Calling)
 
 An LLM on its own can only do one thing — generate text. It cannot check today's 
 flight prices, send an email, run a calculation, or look up your order status. It is 

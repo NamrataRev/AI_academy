@@ -36,7 +36,7 @@ humans do.
 
 ---
 
-## 4.6 The Old Way vs The New Way
+## The Old Way vs The New Way
 
 ### The Old Way — Piped Multimodality
 
@@ -95,7 +95,7 @@ translator inside the model.
 
 ---
 
-## 4.7 How AI Processes Video
+## How AI Processes Video
 
 A single image is straightforward — it's just a grid of pixels. But a video is a 
 sequence of images playing over time, usually with audio alongside it.
@@ -115,7 +115,7 @@ timeline simultaneously.
 
 ---
 
-## 4.8 Generating Multimodal Outputs
+## Generating Multimodal Outputs
 
 Multimodal AI doesn't just read different formats — it can generate them too.
 
@@ -129,7 +129,7 @@ Multimodal AI doesn't just read different formats — it can generate them too.
 
 ---
 
-## 4.9 Real World Application
+## Real World Application
 
 **Google Lens — image to text in real time**
 
@@ -149,7 +149,7 @@ AI makes it trivial.
 
 ---
 
-## 4.10 Why Multimodal AI Matters
+## Why Multimodal AI Matters
 
 Text-only AI is powerful — but it is blind, deaf, and limited to what can be written 
 down. The real world is full of information that exists only as images, sounds, and 

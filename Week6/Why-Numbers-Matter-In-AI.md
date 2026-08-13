@@ -27,7 +27,7 @@ As an AI engineer, you will rarely write the mathematics yourself — libraries 
 
 ---
 
-## 6.1 What Is Numeric Representation?
+## What Is Numeric Representation?
 
 **Numeric representation** is the process of converting any piece of real-world information — a word, an image, a sound, a preference — into a number or a set of numbers so that a computer can store, compare, and compute with it.
 
@@ -54,7 +54,7 @@ There was never an alternative. If you want a machine to do anything at all, you
 
 ---
 
-## 6.2 How Everyday Things Become Numbers
+## How Everyday Things Become Numbers
 
 Here are the most common types of real-world data — and exactly how each one becomes numbers:
 
@@ -93,13 +93,13 @@ flowchart LR
 
 ---
 
-## 6.3 Structured vs Unstructured Data
+## Structured vs Unstructured Data
 
 Not all data starts out in the same state when it arrives at an AI system. This distinction matters — it affects how much work needs to be done before the AI can use it.
 
 **Structured data** is already in a clean, numeric format — organised in rows and columns like a spreadsheet. Age, price, star rating, transaction amount — these are numbers already. An AI can use them directly with minimal preprocessing.
 
-**Unstructured data** has no pre-defined numeric format. Text, images, audio, and video are all unstructured. They require complex encoding — converting to numbers using the methods in section 6.2 — before any AI can process them.
+**Unstructured data** has no pre-defined numeric format. Text, images, audio, and video are all unstructured. They require complex encoding — converting to numbers using the methods in the relevant section — before any AI can process them.
 
 | Type | Examples | Ready for AI? |
 |---|---|---|
@@ -110,7 +110,7 @@ Most of the world's data is unstructured — and most of the interesting AI appl
 
 ---
 
-## 6.4 Normalisation — Making Numbers Play Fair
+## Normalisation — Making Numbers Play Fair
 
 Here is a problem that surprises most beginners.
 
@@ -140,7 +140,7 @@ Now both features are on the same scale. The AI can compare them fairly.
 
 ---
 
-## 6.5 Why This Matters for AI — Embeddings
+## Why This Matters for AI — Embeddings
 
 The examples above are all straightforward conversions — one rule, one number or set of numbers. But modern AI systems go one step further.
 
@@ -164,7 +164,7 @@ For now, the key idea: **before an AI model can "understand" or generate anythin
 
 ---
 
-## 6.6 When Simplification Goes Wrong
+## When Simplification Goes Wrong
 
 Converting real-world things into numbers always involves simplification — and simplification always involves a choice about what to keep and what to leave out. That choice matters enormously.
 

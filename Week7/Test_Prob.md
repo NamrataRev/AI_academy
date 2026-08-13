@@ -23,7 +23,7 @@ Probability is the mathematical language of uncertainty. It is how we quantify l
 
 ---
 
-## 7.1 Probability Basics — Likelihood, Events, Outcomes
+## Probability Basics — Likelihood, Events, Outcomes
 
 At its core, **probability** is simply a number between 0 and 1 that represents how likely something is to happen. A probability of 0 means the event is impossible. A probability of 1 means it is absolutely certain. Everything else falls somewhere in between.
 
@@ -79,7 +79,7 @@ flowchart LR
 
 ---
 
-## 7.2 Conditional Probability — P(A given B)
+## Conditional Probability — P(A given B)
 
 In the real world, events don't happen in isolation. The likelihood of one event often depends on whether another event has already occurred. This is called **conditional probability**.
 
@@ -114,7 +114,7 @@ flowchart LR
 
 ---
 
-## 7.3 Bayes' Theorem — Updating Belief with New Evidence
+## Bayes' Theorem — Updating Belief with New Evidence
 
 Bayes' theorem is one of the most important concepts in all of AI and statistics. It provides a precise mathematical rule for **updating our beliefs when we receive new evidence**.
 

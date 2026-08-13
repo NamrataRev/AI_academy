@@ -16,7 +16,7 @@ By the end of this topic, you will be able to:
 
 Computation is the process of **taking an input, processing it using instructions, and producing an output**. While all computer systems perform computation, they do not all behave the same way. Some are **deterministic**, giving the same output for the same input every time, while others are **probabilistic**, where the output can vary, as seen in AI systems. Understanding this difference is the first step toward learning how AI works and why AI can generate different responses to the same question.
 
-## 1.1 What Is Computation?
+## What Is Computation?
 
 Computation simply means **solving a problem by following steps**. A computer does not "think" like a human. It takes something given to it, follows instructions, and produces a result.
 
@@ -30,7 +30,7 @@ Computation simply means **solving a problem by following steps**. A computer do
 - A search engine takes keywords as input, then returns relevant results.
 - An AI chatbot takes a question as input, then generates a response.
 
-## 1.2 Deterministic Systems - Same Input Always Gives the Same Output
+## Deterministic Systems - Same Input Always Gives the Same Output
 
 A deterministic system always gives the same output when it receives the same input. There is no randomness involved. The rules are fixed, so the result is predictable and repeatable.
 
@@ -38,14 +38,14 @@ A deterministic system always gives the same output when it receives the same in
 - If a traffic signal is programmed to turn green after 60 seconds, it will follow that rule every time.
 - If a login system checks whether a password matches, the result will be either access granted or access denied based on fixed rules.
 
-## 1.3 Probabilistic Systems - Same Input Can Give Different Outputs
+## Probabilistic Systems - Same Input Can Give Different Outputs
 
 A probabilistic system can give different outputs for the same input because it works with likelihoods instead of fixed rules. It does not always choose one guaranteed answer; it chooses from possible answers based on probability.
 
 - A weather forecast may say there is a 70% chance of rain, but the exact outcome is uncertain.
 - A recommendation system may suggest different movies to users based on changing patterns and preferences.
 
-## 1.4 Deterministic vs. Probabilistic Systems — At a Glance
+## Deterministic vs. Probabilistic Systems — At a Glance
 
 | Feature               | Deterministic System                     | Probabilistic System                                        |
 | --------------------- | ---------------------------------------- | ----------------------------------------------------------- |
@@ -57,11 +57,11 @@ A probabilistic system can give different outputs for the same input because it 
 | Used in               | Traditional software                     | Modern AI systems                                           |
 | Advantage             | Reliable, consistent, easy to test       | Flexible, handles uncertainty, generates creative responses |
 
-## 1.5 From Rules to AI — How Computing Evolved
+## From Rules to AI — How Computing Evolved
 
 We have now seen two types of system: deterministic (fixed rules) and probabilistic (likelihoods). But how did we go from rule-based computers to modern AI? This section traces that journey — and shows why it was not a sudden leap, but a natural progression driven by one simple problem: **rules alone are not enough for real-world complexity.**
 
-## 1.5.1 The Problem with Pure Rules
+## The Problem with Pure Rules
 
 Early computers were entirely deterministic — every program was a fixed set of instructions. If this happens, do that. This worked brilliantly for calculators, ATMs, and booking systems: tasks with clear, bounded rules.
 
@@ -77,7 +77,7 @@ This is the core limitation of pure rules: the real world is messy, and no one c
 
 ---
 
-## 1.5.2 The Shift — Let the System Learn from Examples
+## The Shift — Let the System Learn from Examples
 
 The key insight of modern AI is simple: instead of writing the rules yourself, show the system millions of examples and let it discover the patterns on its own.
 
@@ -87,7 +87,7 @@ To see how this plays out in something you already use every day, look at autoco
 
 ---
 
-## 1.5.3 Autocorrect — From Rules to Patterns
+## Autocorrect — From Rules to Patterns
 
 Autocorrect is the clearest example of this shift, because you've used it thousands of times without thinking about it.
 
@@ -109,7 +109,7 @@ This is the shift from rules to patterns. The system isn't following a fixed ins
 
 ---
 
-## 1.5.4 From Autocorrect to AI — The Same Idea, Much Bigger
+## From Autocorrect to AI — The Same Idea, Much Bigger
 
 Once you understand modern autocorrect, you already understand the core of how a Large Language Model like Claude works. The difference is scale, not concept.
 
@@ -126,7 +126,7 @@ This is the direct path from rule-based computing to modern AI:
 Each step made the system better at handling situations it had never been explicitly programmed for. And each step made it more probabilistic — which is exactly why AI gives different answers to the same question, which the next section covers in detail.
 
 ---
-## 1.6 Why AI Gives Different Answers to the Same Question
+## Why AI Gives Different Answers to the Same Question
 **Daily-life analogy:** Imagine asking three different teachers: _"What is Machine Learning?"_
 
 All three know the answer -- but each may explain it differently.

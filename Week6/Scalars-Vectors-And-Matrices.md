@@ -28,7 +28,7 @@ There are three building blocks to know: the **scalar** (a single number), the *
 
 ---
 
-## 6.7 Scalars — A Single Number Representing One Property
+## Scalars — A Single Number Representing One Property
 
 A **scalar** is just a single number that represents one property of something, with no other numbers attached to it.
 
@@ -41,7 +41,7 @@ A scalar answers exactly one question: "how much of this one thing?" Nothing mor
 
 ---
 
-## 6.8 Vectors — A List of Numbers Representing Multiple Properties at Once
+## Vectors — A List of Numbers Representing Multiple Properties at Once
 
 A **vector** is an ordered list of numbers that together describe multiple properties of the *same* thing at the *same* time.
 
@@ -145,7 +145,7 @@ You cannot draw or visualise 1,536 dimensions — but the mathematics works exac
 
 ---
 
-## 6.9 Matrices — Grids of Numbers
+## Matrices — Grids of Numbers
 
 A **matrix** (plural: matrices) is a rectangular grid of numbers arranged in rows and columns. Think of a matrix as many vectors stacked on top of each other.
  
@@ -179,7 +179,7 @@ Order value (30–250) and order count (3–45) are on completely different scal
  
 ---
 
-## 6.10 A Vector as a Point in Space — Coffee Order Profile Example
+## A Vector as a Point in Space — Coffee Order Profile Example
 
 Here is one of the most powerful ideas in this topic: **a vector is not just a list of numbers — it can be visualised as a single point in space.**
 
@@ -225,7 +225,7 @@ This exact idea — **vectors that are close together in space represent similar
 
 ---
 
-## 6.11 Scalar vs Vector vs Matrix — Side by Side
+## Scalar vs Vector vs Matrix — Side by Side
 
 | Aspect | Scalar | Vector | Matrix |
 |---|---|---|---|

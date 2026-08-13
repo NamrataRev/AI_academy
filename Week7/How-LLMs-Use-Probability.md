@@ -21,7 +21,7 @@ Despite their fluent and seemingly thoughtful responses, LLMs are not "thinking"
 
 ---
 
-## 7.4 Why LLMs Output a Probability Distribution
+## Why LLMs Output a Probability Distribution
 
 When an LLM predicts the next word (or more accurately, the next *token*), it does not just pick a single "correct" answer. Instead, it assigns a probability score to *every single word* in its vocabulary (which often contains 50,000 to 100,000+ words).
 
@@ -46,7 +46,7 @@ It captures the nuance that "mat" is highly likely, "couch" is reasonable, and "
 
 ---
 
-## 7.5 Temperature — Controlling the Chaos
+## Temperature — Controlling the Chaos
 
 If the LLM generates a probability distribution of thousands of options, how does it actually *pick* the word it outputs to your screen? 
 

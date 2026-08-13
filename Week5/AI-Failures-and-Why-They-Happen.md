@@ -25,7 +25,7 @@ This topic covers three recurring failure patterns — real-world failure cases,
 
 ---
 
-## 5.1 Real AI Failure Cases
+## Real AI Failure Cases
 
 An AI failure is any instance where an AI system's output causes harm, unfairness, or a wrong decision that a careful human process would likely have avoided.
 
@@ -63,7 +63,7 @@ The underlying technology is neutral — the harm came from the **absence of saf
 
 ---
 
-## 5.2 Hallucination — Why AI States Falsehoods Confidently
+## Hallucination — Why AI States Falsehoods Confidently
 
 **Hallucination** is when an AI model generates information that sounds fluent and confident — but is factually incorrect, fabricated, or not supported by any real source.
 
@@ -89,7 +89,7 @@ In 2023, a New York lawyer named Steven Schwartz used ChatGPT to research case p
 
 ---
 
-## 5.3 Data Bias — How Biased Training Data Produces Biased Output
+## Data Bias — How Biased Training Data Produces Biased Output
 
 **Data bias** occurs when the data used to train an AI model over- or under-represents certain groups, situations, or outcomes — causing the model to learn a skewed version of "normal."
 
@@ -128,14 +128,14 @@ A 2020 study by Stanford researchers found that speech recognition systems from 
 
 ---
 
-## 5.4 Best Practices
+## Best Practices
 
 - Always test an AI system's outputs across different user groups before deployment — don't assume uniform performance
 - Never treat an AI's confident tone as evidence of correctness — confidence and correctness are not the same thing in generative AI
 - Document what data your system was trained or fine-tuned on, so future bias audits are possible
 - For any factual output — especially in healthcare, legal, or financial contexts — ground the AI in verified sources, not model memory alone
 
-## 5.5 Common Beginner Mistakes
+## Common Beginner Mistakes
 
 - Assuming that because a model is "big" or "advanced," it cannot be biased or wrong
 - Testing an AI system only with the type of user you personally represent, and missing failures for other groups
@@ -143,7 +143,7 @@ A 2020 study by Stanford researchers found that speech recognition systems from 
 
 ---
 
-## 5.6 Real World Application
+## Real World Application
 
 **AI in recruitment — a global pattern**
 

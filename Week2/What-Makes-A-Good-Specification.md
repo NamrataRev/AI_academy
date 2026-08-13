@@ -26,7 +26,7 @@ A **specification** (often called a "spec") is a clear, precise description of w
 
 ---
 
-## 2.1 What Is a Specification?
+## What Is a Specification?
 
 A specification is a written description of a task that states exactly:
 - what input the system will receive
@@ -39,7 +39,7 @@ Human language is naturally vague. If you tell a friend "get me something to eat
 
 ---
 
-## 2.2 The Five Properties of a Good Specification (S.M.A.R.T.)
+## The Five Properties of a Good Specification (S.M.A.R.T.)
 
 A specification is only useful if it has all five of these properties. Miss even one and you open the door to a result you didn't want. Memorise them as **S.M.A.R.T.**
 
@@ -95,7 +95,7 @@ Think of it like ordering at a coffee shop:
 
 ---
 
-## 2.3 Bad Spec vs Good Spec
+## Bad Spec vs Good Spec
 
 This is the most common beginner mistake — writing a wish instead of a specification.
 
@@ -140,7 +140,7 @@ This passes all five:
 
 ---
 
-## 2.4 Inputs, Expected Outputs, and Failure Conditions
+## Inputs, Expected Outputs, and Failure Conditions
 
 Every good specification, no matter the domain, breaks into three parts. Ask these three questions before specifying any task:
 

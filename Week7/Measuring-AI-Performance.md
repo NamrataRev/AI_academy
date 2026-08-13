@@ -22,7 +22,7 @@ Measuring AI performance isn't just about a single success rate. When the stakes
 
 ---
 
-## 7.6 Consistency Across AI Runs (Mean, Median, Mode)
+## Consistency Across AI Runs (Mean, Median, Mode)
 
 Because many modern AI systems (especially generative models like LLMs) are probabilistic, they won't give you the exact same result every time. If you run a prompt 10 times, you might get 10 slightly different outputs. To measure things like response length, latency, or confidence scores across multiple runs, you need basic statistics.
 
@@ -32,7 +32,7 @@ Because many modern AI systems (especially generative models like LLMs) are prob
 
 ---
 
-## 7.7 The Confusion Matrix — Moving Beyond Accuracy
+## The Confusion Matrix — Moving Beyond Accuracy
 
 When an AI model makes a binary decision (e.g., "Is this email spam or not spam?"), there are exactly four possible outcomes. We map these outcomes in a grid called a **Confusion Matrix**.
 
@@ -49,7 +49,7 @@ When an AI model makes a binary decision (e.g., "Is this email spam or not spam?
 
 ---
 
-## 7.8 Precision vs. Recall
+## Precision vs. Recall
 
 To get a true sense of an AI's performance, especially on unbalanced datasets, we look at Precision and Recall. These metrics force us to look directly at the errors (False Positives and False Negatives).
 
@@ -78,7 +78,7 @@ flowchart LR
 
 ---
 
-## 7.9 Interpreting AI Output Variation and Reliability
+## Interpreting AI Output Variation and Reliability
 
 If you run an AI system 100 times, variation in the output tells you a lot about the system's underlying reliability.
 - **High Consistency (Low Variation):** If the precision and recall scores remain steady across different days, different users, and different subsets of data, the model is highly robust.
