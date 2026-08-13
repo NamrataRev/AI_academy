@@ -78,7 +78,7 @@ Explaining every part:
 - The division at the bottom — makes sure all the final percentages add up to exactly 100%. Think of it like converting raw exam marks into a percentage — you divide each student's marks by the total marks available so everything sits on the same scale.
 
 ### Worked Calculation — Three Candidate Tokens
-![Temperature in AI](images/TempEx.png)
+![Temperature in AI](/images/TempEx.png)
 
 ### Low vs High Temperature — Side by Side
 
