@@ -268,6 +268,8 @@ The maths confirmed exactly what you predicted before calculating. That is the p
 | 0.4 – 0.8 | Somewhat related — shared context |
 | 0.0 – 0.4 | Unrelated — different topics |
 
+> **Real-World Note:** While the math works this way in our 3D example, real high-dimensional models (like OpenAI's) often compress their scores into a narrow range. In production, a score of 0.75 might actually mean "unrelated," while 0.85+ means "very similar." You always have to benchmark the baseline of your specific model!
+
 ---
 
 ### Common Beginner Mistakes
