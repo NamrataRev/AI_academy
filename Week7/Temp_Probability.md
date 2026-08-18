@@ -69,9 +69,9 @@ P(rain today) = Number of rainy days observed / Total days observed
 With no other information — you haven't looked outside yet, no forecast, nothing — your best estimate is a 20% chance of rain today. It's a rough number, but it's a starting point.
 
 ## How this connects to AI:
-Think about how Google Photos recognises faces. When you upload a photo, the app doesn't just say "that's definitely your friend Rahul." It calculates a confidence score for every possibility — and those scores are probabilities.
+Think about how an app like Google Photos automatically sorts and labels your pictures. Say you upload a close-up photo of a fluffy pet — the lighting is a bit dim and its face is partly turned away from the camera, so even a person might have to squint at it. The app's image classifier doesn't just declare "that's definitely a cat." It calculates a confidence score for every animal it knows how to recognise, and shows you the most likely one.
 
-For example, an image classifier might look at a photo and output:
+For that photo, the classifier might output:
 
 - Cat — 85% confident
 - Dog — 10% confident
@@ -88,6 +88,8 @@ flowchart LR
     B --> E[Rabbit: 5%]
     C & D & E --> F[All probabilities add to 100%]
 ```
+
+---
 
 ---
 
