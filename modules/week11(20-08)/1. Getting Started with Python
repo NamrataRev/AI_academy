@@ -4,7 +4,7 @@
 
 [Go back to TOC](../../README.md) | [Next: 1.2 Variables, Identifiers & Types →](unit-1-2-variables-identifiers-types.md)
 
-## 1. Learning Objectives
+## Learning Objectives
 
 By the end of this unit, you will be able to:
 
@@ -17,7 +17,7 @@ By the end of this unit, you will be able to:
 
 ---
 
-## 2. Overview
+## Overview
 
 Imagine you have just joined your first software job. Before you write a single line of business logic, you need two things: a language to write instructions in, and a place to actually run those instructions and see what happens. This unit is about exactly that — nothing more, nothing less.
 
@@ -29,15 +29,15 @@ By the end of this unit, you will have typed and run your very first Python prog
 
 ---
 
-## 3. Description
+## Description
 
-### 3.1 Definition
+### Definition
 
 A **programming language** is a formal, precise set of words and symbols that lets a human give instructions to a computer. Think of it as a strict, unambiguous language — unlike English or Hindi, which allow multiple interpretations of the same sentence, a programming language allows exactly one meaning per valid instruction.
 
 **Python** is one such programming language. It was created to be easy to read and easy to write, while still being powerful enough to run banking systems, e-commerce platforms, and AI models.
 
-### 3.2 Why This Concept Exists
+### Why This Concept Exists
 
 Every fresher asks the same question in their first week: "There are so many programming languages — C, Java, JavaScript, Python — why are we starting with Python?"
 
@@ -48,7 +48,36 @@ The honest answer has two parts:
 
 In short: Python exists in your syllabus because it lowers the barrier to entry today and keeps the door open to almost every advanced software career path tomorrow — data engineer, backend developer, ML engineer, automation engineer, and more.
 
-### 3.3 Key Terminology
+### Python's Role — The Orchestration Layer
+
+Here is the key mental model for everything you will build in this program:
+
+```mermaid
+flowchart LR
+    A[Your Specification\nwhat you want done] --> B[Python Code\nthe orchestration layer]
+    B --> C[AI Model — Claude\ndoes the thinking and generation]
+    C --> D[Python Code\nreceives checks and uses the AI answer]
+    D --> E[Final Output\nshown to user saved or passed on]
+```
+
+Notice that Python appears **twice** — before the AI call and after it:
+
+- **Before:** Python prepares the exact question to send to the AI, based on your specification
+- **After:** Python receives the AI's response and decides what to do — check the format, extract the relevant part, handle errors, save the result
+
+The AI does not run on its own. Something has to call it, pass the right information, and handle what comes back. That something is Python.
+
+> **Important:** You do not need Python to use an AI chatbot casually — typing into Claude.ai in your browser needs no code. You need Python when you want to **build a system** that uses AI as one component alongside other logic — validation, error handling, multiple steps, storing results. That is the difference between being an AI user and an AI-native engineer.
+
+**Specification vs Code vs AI Call — what each one is:**
+
+| Activity | What you are doing | Example |
+|---|---|---|
+| Writing a specification | Describing in plain English what the system should do | "Given a list of exam marks, calculate the average and flag any mark below 35 as a fail" |
+| Writing Python code | Turning part of the specification into precise, deterministic instructions | `average = sum(marks) / len(marks)` |
+| Calling an AI model | Asking the AI to generate something that has no single fixed answer | "Write an encouraging one-line message for a student who scored 32 out of 100" |
+
+### Key Terminology
 
 | Term | Simple Meaning |
 |---|---|
@@ -84,75 +113,7 @@ flowchart TD
     L --> R
 ```
 
-### 3.4 Step-by-Step Guide: Accessing and Activating Google Colab for the First Time
-
-Before you go any further, get Google Colab open and ready — this is where you will write and run every example in this unit. If you have never done this before, follow these steps exactly, in order. Don't skip ahead — each step depends on the one before it.
-
-**What you need before you start:**
-- A computer or laptop with an internet connection.
-- A web **browser** — the application you use to visit websites, such as Google Chrome or Microsoft Edge.
-- A **Google account** (the same kind of account you would use for Gmail). If you don't have one, you will need to create one first at `accounts.google.com` — this takes only a couple of minutes.
-
-**Step 1: Open your browser and go to the Colab website.**
-Type `colab.research.google.com` into the address bar at the top of your browser (this is called a **URL** — the address of a specific page on the internet) and press Enter. This takes you directly to Google Colab's homepage.
-
-**Step 2: Sign in with your Google account.**
-If you are not already signed in, Colab will ask you to **sign in** — meaning you enter your Google email and password so Google knows it is really you. Use the same Google account you use for Gmail or Google Drive. Signing in matters because your notebooks (the files you'll create) are saved to *your* Google Drive, not anyone else's.
-
-**Step 3: Look at the "Welcome to Colab" screen.**
-Once signed in, you will usually see a welcome page with some example notebooks and a popup asking you to open a recent file or start something new. You can close this popup for now — you don't need any of these examples yet.
-
-<img src="../../Images/image%20%289%29.png" alt="The Welcome to Colab page, showing the toolbar of an empty text cell highlighted in red" width="480">
-
-*This is what the welcome page looks like once you're signed in — notice the "Welcome to Colab!" heading and the toolbar highlighted above the first cell. That toolbar (bold, italic, insert-link, insert-image, and more) belongs to a text cell, used for writing notes rather than Python code — you'll create your own **code** cell in the next step.*
-
-**Step 4: Create a brand-new, empty notebook.**
-Click on **File** in the top-left menu, then click **New notebook**. A **notebook** is the document where you'll write and run your Python code. Google Colab will now open a fresh, empty notebook for you, with one empty **cell** already waiting.
-
-
-<img src="../../Images/image%20%288%29.png" alt="The same File menu with New notebook highlighted (dark theme)" width="480">
-
-*Google Colab can appear in a light or dark theme depending on your Google account's display settings — both screenshots above show the same action: open the **File** menu, then click **New notebook**.*
-
-**Step 5: Give your notebook a proper name.**
-At the top-left of the page, you will see a default name like `Untitled0.ipynb` (the `.ipynb` ending simply means "IPython Notebook" — the file format Colab uses). Click directly on this name and rename it to something meaningful, such as `unit-1-1-first-program`. This small habit will help you a lot later, especially when you have many notebooks and need to find the right one quickly — including while revising for interviews.
-
-**Step 6: Locate the first code cell.**
-Look for the empty box on the page with a small "play" (▶) button or **Run** icon on its left side. This is a **cell** — the box where you type your Python code. Right now it is empty and waiting for you.
-
-**Step 7: Type your first line of code into the cell.**
-Click inside the empty cell and type:
-
-```python
-print("Hello, world!")
-```
-
-**Step 8: Run the cell.**
-There are two ways to run a cell — pick whichever feels easier:
-- Click the ▶ **Run** button on the left side of the cell, or
-- Press **Shift + Enter** on your keyboard (hold Shift, then press Enter).
-
-**Step 9: Read the output.**
-Within a second or two, you should see `Hello, world!` appear directly underneath the cell. This confirms three things at once: Colab is active, your Python interpreter is running, and your very first program worked correctly.
-
-**How Your Code Becomes Output**
-
-```mermaid
-flowchart LR
-    A["You type Python code<br/>in a Colab cell"] --> B["Python Interpreter<br/>reads the code"]
-    B --> C["Interpreter executes<br/>one instruction at a time"]
-    C --> D["Output appears<br/>below the cell"]
-```
-
-**Step 10: Confirm your work is saved.**
-Google Colab automatically saves your notebook to your Google Drive as you work, usually shown as "Saving..." briefly near the top of the page. You can also save manually at any time using **File → Save**, or the keyboard shortcut **Ctrl + S**. This means you can safely close the browser tab and come back to the exact same notebook later, from any computer, just by signing in again.
-
-**If something doesn't work:**
-- If the page looks stuck or blank, refresh the browser tab and try again.
-- If a popup about "cookies" or "notifications" appears, you can dismiss it — it does not affect your code.
-- If you accidentally close the tab, don't worry — reopen `colab.research.google.com`, and your notebook will be waiting for you in **File → Open notebook → Recent**, since it was already saved to your Google Drive.
-
-### 3.5 Syntax
+### Syntax
 
 Your very first piece of Python syntax is the `print()` function call:
 
@@ -169,14 +130,14 @@ Let's break this down piece by piece, because as a fresher you must be able to n
 | `"Hello, world!"` | A **string literal** — text wrapped in quotes. | The quotes tell Python "treat this as literal text, not as an instruction." Without quotes, Python would try to understand `Hello` as code and fail. |
 | *(no semicolon)* | Python statements normally end with a newline, not a semicolon. | Unlike languages like Java or C, Python doesn't require a `;` to mark the end of a line. |
 
-### 3.6 Rules
+### Rules
 
 - Every string must open and close with a matching pair of quotes — either `"double quotes"` or `'single quotes'`, but the opening and closing quote must match.
 - Function calls always need parentheses, even if you are passing nothing inside them.
 - Python cares about **case**: `print` works, but `Print` or `PRINT` will raise an error, because Python treats them as different, unrecognised names.
 - Indentation (spacing at the start of a line) has meaning in Python — you haven't touched this yet in unit 1.1, but keep it in mind, because it becomes critical from unit 2.1 onward.
 
-### 3.7 Best Practices
+### Best Practices
 
 - Always run notebook cells **top to bottom**, in order, especially early in your career — out-of-order execution is one of the most common sources of "but it worked a second ago!" confusion.
 - Give your Colab notebooks meaningful names (e.g., `unit-1-1-first-program.ipynb`) instead of leaving them as `Untitled0.ipynb` — you will thank yourself later when revising for interviews.
@@ -184,7 +145,7 @@ Let's break this down piece by piece, because as a fresher you must be able to n
 - When your runtime feels "stuck" or behaves unexpectedly, restart it and rerun from the top rather than guessing — it is a cheap, reliable reset.
 - Save your work to Google Drive frequently; don't rely on an open browser tab as your only copy.
 
-### 3.8 Common Mistakes
+### Common Mistakes
 
 - **Forgetting the quotes** around text: writing `print(Hello, world!)` instead of `print("Hello, world!")`. Python will try to treat `Hello` as a name it should already know, and fail with an error.
 - **Mismatched quotes**: starting a string with `"` and closing it with `'`.
@@ -192,7 +153,7 @@ Let's break this down piece by piece, because as a fresher you must be able to n
 - **Confusing "writing code" with "running code"**: typing a program into a cell does nothing until you actually execute that cell.
 - **Panicking at the first error message** instead of reading it — Python's error messages almost always tell you exactly what went wrong and on which line.
 
-### 3.9 Code Examples
+### Code Examples
 
 **Scenario: Aditi Sharma's first day as a fresher at an IT company.** Aditi has just joined an IT company as a fresher, and her onboarding system needs to print a few things to the screen on her first day — starting with a simple welcome, and gradually building up to a fully formatted digital ID card. We'll build this up one small step at a time, exactly as you would in your own Colab notebook — running one cell, reading its output, then extending it.
 
@@ -347,9 +308,77 @@ Batch: 2026-Colab-01
 
 Notice that each part only adds `print()` calls on top of the previous part — nothing you already had needs to change. That "extend, don't rewrite" habit is exactly what you will keep doing as your programs grow in later units.
 
+### Step-by-Step Guide: Accessing and Activating Google Colab for the First Time
+
+Before you go any further, get Google Colab open and ready — this is where you will write and run every example in this unit. If you have never done this before, follow these steps exactly, in order. Don't skip ahead — each step depends on the one before it.
+
+**What you need before you start:**
+- A computer or laptop with an internet connection.
+- A web **browser** — the application you use to visit websites, such as Google Chrome or Microsoft Edge.
+- A **Google account** (the same kind of account you would use for Gmail). If you don't have one, you will need to create one first at `accounts.google.com` — this takes only a couple of minutes.
+
+**Step 1: Open your browser and go to the Colab website.**
+Type `colab.research.google.com` into the address bar at the top of your browser (this is called a **URL** — the address of a specific page on the internet) and press Enter. This takes you directly to Google Colab's homepage.
+
+**Step 2: Sign in with your Google account.**
+If you are not already signed in, Colab will ask you to **sign in** — meaning you enter your Google email and password so Google knows it is really you. Use the same Google account you use for Gmail or Google Drive. Signing in matters because your notebooks (the files you'll create) are saved to *your* Google Drive, not anyone else's.
+
+**Step 3: Look at the "Welcome to Colab" screen.**
+Once signed in, you will usually see a welcome page with some example notebooks and a popup asking you to open a recent file or start something new. You can close this popup for now — you don't need any of these examples yet.
+
+<img src="../../Images/image%20%289%29.png" alt="The Welcome to Colab page, showing the toolbar of an empty text cell highlighted in red" width="480">
+
+*This is what the welcome page looks like once you're signed in — notice the "Welcome to Colab!" heading and the toolbar highlighted above the first cell. That toolbar (bold, italic, insert-link, insert-image, and more) belongs to a text cell, used for writing notes rather than Python code — you'll create your own **code** cell in the next step.*
+
+**Step 4: Create a brand-new, empty notebook.**
+Click on **File** in the top-left menu, then click **New notebook**. A **notebook** is the document where you'll write and run your Python code. Google Colab will now open a fresh, empty notebook for you, with one empty **cell** already waiting.
+
+
+<img src="../../Images/image%20%288%29.png" alt="The same File menu with New notebook highlighted (dark theme)" width="480">
+
+*Google Colab can appear in a light or dark theme depending on your Google account's display settings — both screenshots above show the same action: open the **File** menu, then click **New notebook**.*
+
+**Step 5: Give your notebook a proper name.**
+At the top-left of the page, you will see a default name like `Untitled0.ipynb` (the `.ipynb` ending simply means "IPython Notebook" — the file format Colab uses). Click directly on this name and rename it to something meaningful, such as `unit-1-1-first-program`. This small habit will help you a lot later, especially when you have many notebooks and need to find the right one quickly — including while revising for interviews.
+
+**Step 6: Locate the first code cell.**
+Look for the empty box on the page with a small "play" (▶) button or **Run** icon on its left side. This is a **cell** — the box where you type your Python code. Right now it is empty and waiting for you.
+
+**Step 7: Type your first line of code into the cell.**
+Click inside the empty cell and type:
+
+```python
+print("Hello, world!")
+```
+
+**Step 8: Run the cell.**
+There are two ways to run a cell — pick whichever feels easier:
+- Click the ▶ **Run** button on the left side of the cell, or
+- Press **Shift + Enter** on your keyboard (hold Shift, then press Enter).
+
+**Step 9: Read the output.**
+Within a second or two, you should see `Hello, world!` appear directly underneath the cell. This confirms three things at once: Colab is active, your Python interpreter is running, and your very first program worked correctly.
+
+**How Your Code Becomes Output**
+
+```mermaid
+flowchart LR
+    A["You type Python code<br/>in a Colab cell"] --> B["Python Interpreter<br/>reads the code"]
+    B --> C["Interpreter executes<br/>one instruction at a time"]
+    C --> D["Output appears<br/>below the cell"]
+```
+
+**Step 10: Confirm your work is saved.**
+Google Colab automatically saves your notebook to your Google Drive as you work, usually shown as "Saving..." briefly near the top of the page. You can also save manually at any time using **File → Save**, or the keyboard shortcut **Ctrl + S**. This means you can safely close the browser tab and come back to the exact same notebook later, from any computer, just by signing in again.
+
+**If something doesn't work:**
+- If the page looks stuck or blank, refresh the browser tab and try again.
+- If a popup about "cookies" or "notifications" appears, you can dismiss it — it does not affect your code.
+- If you accidentally close the tab, don't worry — reopen `colab.research.google.com`, and your notebook will be waiting for you in **File → Open notebook → Recent**, since it was already saved to your Google Drive.
+
 ---
 
-## 4. Real-World Application
+## Real-World Application
 
 The pattern you practiced in this unit — write instructions, run them, read the output — is the exact same loop used in every professional Python codebase, just at a larger scale:
 
@@ -364,7 +393,7 @@ The takeaway for a fresher: the "toy" program you just wrote is not a separate s
 
 ---
 
-## 5. Worked Example
+## Worked Example
 
 ### Problem Statement
 
@@ -430,7 +459,7 @@ Its combination of readability and a rich, ready-made ecosystem of libraries mak
 
 ---
 
-## 6. Key Takeaways
+## Key Takeaways
 
 - Python is widely used in the industry because it is readable and has a rich ecosystem of ready-made libraries, especially for AI/ML and data work.
 - Python is generally described as an **interpreted language** — the interpreter executes your code line by line, without a separate compile step you manage yourself.
@@ -446,7 +475,7 @@ Coming next: the building blocks of the language itself — variables, identifie
 
 ---
 
-## 7. Reference Links
+## Reference Links
 
 - [The Python Tutorial — Using the Python Interpreter (Official Docs)](https://docs.python.org/3/tutorial/interpreter.html)
 - [Python 3 Documentation — `print()` built-in function](https://docs.python.org/3/library/functions.html#print)
