@@ -135,24 +135,4 @@ def analyze_fraud_risk(transaction_log, api_key):
 # print(analyze_fraud_risk(log, "your-key-here"))
 ```
 
----
 
-## Interview Questions
-
-**Q1: "What is the 5-Role Context Framework in prompt engineering?"**
-A: It is a structured methodology for writing system prompts by defining five key elements: Authority (persona), Exemplar (examples), Constraint (boundaries), Rubric (evaluation criteria), and Metadata (situational context). 
-
-**Q2: "Why is 'Metadata' important when calling an LLM programmatically?"**
-A: LLMs only know the data they were trained on, which has a cutoff date and lacks knowledge of your specific internal company systems. Injecting Metadata (like current dates, user preferences, or database schemas) gives the model the situational awareness needed to provide a relevant, system-specific answer.
-
----
-
-## Quick Recap
-
-To write enterprise-grade prompts, ensure your prompt covers the 5 Roles:
-- **Authority:** Who is the AI?
-- **Exemplar:** Give examples of the input/output pattern.
-- **Constraint:** Set strict rules on what the AI cannot do.
-- **Rubric:** Tell the AI how it will be judged.
-- **Metadata:** Provide the contextual data necessary to solve the problem.
-- Using XML tags (like `<constraints>`) is an excellent way to cleanly organize these 5 roles within your system prompt.
